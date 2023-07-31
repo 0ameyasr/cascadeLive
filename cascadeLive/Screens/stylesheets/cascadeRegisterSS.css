@@ -1,0 +1,213 @@
+*{
+    font-family: 'Roboto',sans-serif;
+}
+
+.page-division{
+    display: grid;
+    grid-template-rows: auto 10%;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+#register-division{
+    display: flex;
+    background:url('../assets/cascadecall.gif');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    align-items: center;
+    justify-content: center;
+}
+#register-panel{
+    height: 95%;
+    width:60%;
+    background-color: rgba(0,0,0,0.7);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    animation: intro 5s linear;
+}
+@keyframes intro {
+    0%{
+        opacity: 0.0;
+    }
+    100%{
+        opacity: 1.0;
+    }
+}
+.form-control.override{
+    background-color: rgba(0,0,0,0.1);
+    border-radius: 0rem;
+    color:white;
+    animation:glow 3s linear infinite;
+}
+
+.form-control.override:focus{
+    background-color: rgba(0,0,0,0.1);
+    color:white;
+    border-radius: 0rem;
+    outline-color: none !important;
+    box-shadow: 0 0 10px #ffd700;
+    border:1px solid rgba(0,0,0,0.1);
+    animation:glow 3s linear infinite;
+}
+
+
+.form-submit-button{
+    background-color: rgba(0,0,0,0.1);
+    border-radius: 0rem;
+    border:1px solid white;
+    color:white;
+}
+
+.form-submit-button:hover{
+    transform: scale(1.10);
+    color:#ffd700;
+    border:1px solid gray;
+    animation:glow 5s linear infinite;
+}
+
+.form-check-input[type=checkbox].override{
+    border-radius: 0rem;
+    background-color: rgba(0,0,0,0.1);
+    border:1px solid white;
+}
+.form-check-input[type=checkbox].override:checked{
+    background-color: rgba(0,0,0,0.3);
+    outline-color: none !important;
+    box-shadow: 0 0 10px #ffd700;
+    border:1px solid rgba(0,0,0,0.1);
+}
+
+.form-check-input[type=text].override{
+    color:white;
+}
+.form-check-input[type=text].override:focus{
+    color:white;
+}
+
+@keyframes glow {
+    0%{
+        border: 3px solid rgba(255,255,255,0.1);
+    }   
+    20%{
+        border: 3px solid rgba(255,255,255,0.3);
+    } 
+    40%{
+        border: 3px solid rgba(255,255,255,0.5);
+    }
+    60%{
+        border: 3px solid rgba(255,255,255,0.7);
+    }
+    80%{
+        border: 3px solid rgba(255,255,255,0.3);
+    }
+    100%{
+        border: 3px solid rgba(255,255,255,0.1);
+    }
+}
+
+.footer-nav{
+    height: 10vh;
+    border:1px solid black;
+    background-color: rgba(0,0,0,1);
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+
+.inline-link {
+    color: rgb(146, 158, 166);
+    text-decoration: none;
+    font-size: larger;
+}
+.inline-link:hover {
+    /*basic hoverEvent for the inline links*/
+    text-decoration: none;
+    color: red;
+}
+
+.form-inputs{
+    justify-content: center;
+    align-items: center;
+}
+
+label{
+    color:white;
+}
+
+#welcomeMessage{
+    font-size: 24px;
+    color:#ffd700;
+    position: fixed;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    animation:fadeIn 7s linear;
+    background-color: rgba(255,255,255,0.1);
+    text-shadow: 1px 1px black;
+}
+
+#welcomeMessageError{
+    font-size: 24px;
+    font-weight: bold;
+    color:red;
+    position: fixed;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    animation:fadeIn 7s linear;
+    background-color: rgba(255,255,255,0.1);
+    text-shadow: 1px 1px black;
+}
+@keyframes fadeIn {
+    0%{
+        opacity: 0.0;
+    }
+    25%{
+        opacity: 0.0;
+    }
+    50%{
+        opacity: 0.0;
+    }
+    100%{
+        opacity: 1.0;
+    }
+}
+
+/*transition bar*/
+#transition-bar-one::after {
+    content: "";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index:10;
+    background: url('../assets/loading4.gif');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-color: gray;
+    animation: loading 2s linear;
+}
+@keyframes loading {
+    0% {
+        opacity: 1.0;
+    }
+    100%{
+        opacity: 0.0;
+    }
+}
+
+.modal-content.override{
+    background-color:white;
+    --bs-modal-border-radius:0px;
+    color:black;
+    font-family: 'Tahoma';
+}

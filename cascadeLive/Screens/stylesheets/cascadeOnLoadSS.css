@@ -1,0 +1,101 @@
+/*universal selector for font to adhere to the suitable font-family*/
+*{
+    font-family: 'Roboto',sans-serif;
+}
+
+/*the main body, with hidden overflow (scrollbars not necessary for this 
+  page) and moving .gif background restricted to no repitition and full
+  body scale size 100/100 */
+body{
+    overflow: hidden;
+    background:url('..\\assets\\ai.gif');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-color: black;
+}
+
+/*stylise the logo container division made by the JS part of the loading
+  screen for the A2B logo*/
+.logo-container {
+    height: 30%;
+    width: 100%;
+    color:#ffd700;
+    text-shadow:2px 2px black;
+
+    /*responsive center aligned flexbox*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /*emblem animation at the beginning*/
+    animation: fadeIn 0.5s linear;
+}
+/*animation keyframes for fading in, scale-up*/
+@keyframes fadeIn {
+    0%{
+        opacity: 0.1;
+    }
+    100%{
+        opacity: 1.0;
+        transform: scale(5.0);
+
+    }
+    
+}
+
+/*stylise the subcaption welcome-note div*/
+#welcome-note {
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    margin-top: 30%;
+    color: #ffd700;
+    font-size: 1.2em;
+
+    /*z-index is added so that the div does not go
+      behind the translucent container / background*/
+    z-index: 10;
+}
+
+/*stylise the loading message itself*/
+#loadingMessage {
+    width: 100%;
+    height:100%;
+    margin-top: 20%;
+    font-size: 3.2em;
+    color: white;
+    position: fixed;
+    z-index: 10;
+}
+
+/*this segment is responsible for the translucent background
+  progress animation division the user sees on entering the 
+  page*/
+#progress-bar-one::after {
+    content: "";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(100, 100, 100, 0.2);
+    animation: progress-animation 7s linear;
+}
+/*basic CSS progress animation from width 0% to
+  100% */
+@keyframes progress-animation {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/*media query for absurd behaviour in Galaxy Fold*/
+@media (max-width:653px){
+    #welcome-note{
+        margin-top:80%;
+    }
+}

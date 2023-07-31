@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+
+<head>
+    <!-- basic title, links for the page icon and the local and BootStrap 5.0 scripts and stylesheets-->
+    <title>
+        Cascade API - Register
+    </title>
+
+    <!--necessary metadata for character set encoding and responsive scales-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!--link local icon,stylesheet and script-->
+    <link rel="icon" href="..\assets\cascadeIcon3D.png">
+    <link rel="stylesheet" href="..\stylesheets\cascadeRegisterSS.css">
+    <script src="..\scripts\cascadeRegisterScript.js"></script>
+
+    <!--link Bootstrap 5.0 CDN , stylesheets and scripts-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+    </script>
+    <script src="https://www.google.com/recaptcha/api.js?render=6LdXwGAnAAAAAHBZQcGqfvVvlzVxHq-oEoI87l06"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <script>
+            // Fetch the JSON configuration file
+            fetch('domaincfg.json')
+                .then(response => response.json())
+                .then(data => {
+                    // Read data from the configuration file
+                    const url = data.domain_url;
+                    // Use the data as needed, e.g., update form action
+                    const form = document.getElementById('formpost');
+                    form.action = url;
+                    // You can use other_config_data in your script too if needed
+            })
+            .catch(error => console.error('Error fetching configuration:', error));
+    </script>
+    </head>
+
+<body>
+    <div id="transition-bar"></div>
+    <div class="page-division">
+        <div id="register-division">
+            <div id="welcome-note-division">
+                <p id="welcome-note" style="font-size:50px;color:white;">
+
+                </p>
+            </div>
+            <div id="register-panel">
+                <form method="post" id="formpost">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Email address</label>
+                        <input type="email" class="form-control override" name="email" aria-describedby="emailHelp"
+                            placeholder="Enter email" required>
+                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                            else.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Password</label>
+                        <input type="password" class="form-control override" name="passkey" id="passkeyField"
+                            placeholder="Password" required>
+                        <small id="passwordError" style="color:#ffd700" maxlength="32">
+                            Your password must be atleast 8 characters long.
+                        </small>
+                        <script>
+                            let passbar = document.getElementById("passkeyField");
+                            passbar.addEventListener('input', function () {
+                                const inputString = passbar.value;
+                                const regex = /^.{8,32}$/;
+                                if (regex.test(inputString)) {
+                                    document.getElementById("passwordError").innerHTML = "<font style='color:gray;'>Valid Password</font>";
+                                    document.getElementById("submitbutton").disabled = false;
+                                } else {
+                                    document.getElementById("passwordError").innerHTML = "<font style='color:red;'>Invalid Password," +
+                                        " Only 8-32 characters are allowed.</font>";
+                                }
+                            });
+                        </script>
+                    </div>
+                    <div class="form-check">
+                        <center>
+                            <input type="checkbox" class="form-check-input override" id="exampleCheck1" required>
+                            <label class="form-check-label" for="exampleCheck1">
+                                <a type="button" data-bs-toggle="modal" data-bs-target="#tncmodal">Terms and
+                                    Conditions</a>
+                            </label>
+                        </center>
+                    </div>
+                    <center>
+                        <br><br>
+                        <button type="submit" id="submitbutton" class="form-submit-button" disabled>Submit</button>
+                    </center>
+                </form>
+            </div>
+        </div>
+        <div class="footer-nav">
+            <a class="inline-link" href="../pages/cascadeHome.html"><img src="../assets/cascadeAPI.png" height="100%"
+                    width="200px"></a>
+        </div>
+    </div>
+    <div class="modal" tabindex="-1" id="tncmodal">
+        <div class="modal-dialog">
+            <div class="modal-content override">
+                <div class="modal-header">
+                    Cascade API - Terms and Conditions
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p style="color:black;text-align: justify;font-family:'Consolas';">
+                        Terms and Conditions (T&C):
+                        <br><br>
+                        Welcome to Cascade API, an innovative open-source project designed to provide developers with
+                        powerful programming language translation and natural language processing capabilities. Before
+                        you access and use Cascade API, we encourage you to carefully read and understand these Terms
+                        and Conditions. By accessing or using the API, you acknowledge that you have read, understood,
+                        and agreed to be bound by these T&C. If you do not agree with any part of these terms, please
+                        refrain from accessing or using the API.
+                        <br><br>
+                        1. API License:
+                        1.1. Cascade API is an open-source project distributed under the terms of the MIT License
+                        This license grants you a non-exclusive, worldwide, royalty-free license to use, copy,
+                        modify, and distribute the software subject to the terms and conditions of the open-source
+                        license.
+                        <br><br>
+                        2. User Conduct and Responsibilities:
+                        2.1. You, as a user of Cascade API, agree to use the API in compliance with all applicable laws,
+                        regulations, and these T&C. You shall not engage in any activity that could harm the integrity,
+                        availability, or performance of the API or its related services.
+                        <br><br>
+                        3. Intellectual Property Rights:
+                        3.1. All intellectual property rights to the Cascade API, including but not limited to source
+                        code, documentation, design elements, and logos, are owned by Cascade API and its
+                        contributors. No part of the API's content or materials may be used, reproduced, or distributed
+                        without the explicit written permission of the respective owners.
+                        <br><br>
+                        4. Contribution and Feedback:
+                        4.1. We welcome contributions to the Cascade API from the developer community. By submitting
+                        contributions, suggestions, or feedback, you grant us the right to use, modify, and distribute
+                        your contributions under the terms of the open-source license.
+                        <br><br>
+                        5. Warranty Disclaimer:
+                        5.1. The Cascade API is provided on an "as is" and "as available" basis. Cascade API and its
+                        contributors do not make any warranties or representations, either express or implied, regarding
+                        the accuracy, reliability, or suitability of the API for any purpose. Your use of the API is at
+                        your sole risk.
+                        <br><br>
+                        6. Limitation of Liability:
+                        6.1. In no event shall Cascade API or its contributors be liable for any damages, including
+                        but not limited to direct, indirect, incidental, special, or consequential damages, arising out
+                        of or in connection with the use or performance of the Cascade API.
+                        <br><br>
+                        7. Modification and Termination:
+                        7.1. Project Cascade reserves the right to modify, suspend, or terminate Cascade API, or any
+                        part
+                        of it, at any time without prior notice. We may also update these T&C, and it is your
+                        responsibility to review them periodically for any changes.
+                        <br><br>
+                        8. Governing Law and Jurisdiction:
+                        8.1. These Terms and Conditions shall be governed by and construed in accordance with the laws
+                        of the Supreme Court of India. Any disputes arising from the use of Cascade API shall be subject
+                        to the
+                        exclusive jurisdiction of the courts in India.
+                        <br><br>
+                        Privacy Policy:
+                        <br><br>
+                        We respect the privacy of our users and are committed to safeguarding their personal
+                        information. Our Privacy Policy outlines how we collect, use, disclose, and protect user data.
+                        By accessing and using Cascade API, you consent to the data practices described in the Privacy
+                        Policy.
+                        <br><br>
+                        Introduction
+                        Welcome to Cascade API, an open-source project that provides developers with advanced
+                        programming language translation and natural language processing capabilities. This Privacy
+                        Policy is intended to inform you about how we collect, use, disclose, and protect your personal
+                        information when you access and use Cascade API. We are committed to maintaining the privacy and
+                        security of your data and adhere to applicable data protection laws and regulations.
+                        <br><br>
+                        Information We Collect
+                        2.1. Personal Information: When you register as a member or use Cascade API, we may collect
+                        certain personal information from you, such as your name, email address, and other contact
+                        details.
+                        <br><br>
+                        2.2. Usage Data: We may automatically collect information about your interaction with
+                        Cascade API, including your IP address, browser type, device identifiers, operating system,
+                        and the pages you visit.
+                        <br><br>
+                        2.3. Cookies and Similar Technologies: Cascade API may use cookies and similar technologies
+                        to enhance your user experience, track usage patterns, and gather information about how you
+                        navigate and interact with our website.
+                        <br><br>
+                        How We Use Your Information
+                        3.1. Providing Services: We use the collected information to provide you with access to Cascade
+                        API and its features, respond to your inquiries, and customize your experience.
+                        <br><br>
+                        3.2. Improving and Analyzing Services: We may use your information to analyze user trends,
+                        monitor the performance of Cascade API, and make improvements based on user preferences.
+                        <br><br>
+                        3.3. Communication: We may use your email address to send you important notifications,
+                        updates about the API, and relevant information related to your account.
+                        <br><br>
+                        Data Security
+                        4.1. We employ industry-standard security measures to protect your personal information
+                        from unauthorized access, disclosure, or alteration. However, it is important to note that
+                        no method of data transmission over the internet or electronic storage is 100% secure.
+                        <br><br>
+                        Sharing of Information
+                        5.1. We do not sell, trade, or rent your personal information to third parties. We may share
+                        your information with our trusted partners and service providers who assist us in delivering
+                        Cascade API services. However, these third parties are required to maintain the confidentiality
+                        of your information and comply with data protection laws.
+                        <br><br>
+                        Data Retention
+                        6.1. We retain your personal information only for as long as necessary to fulfill the
+                        purposes for which it was collected, and as required by law.
+                        <br><br>
+                        Your Rights
+                        7.1. You have the right to access, update, or delete your personal information from our
+                        records. If you wish to exercise any of these rights or have questions about your data,
+                        please contact us at [email protected]
+                        <br><br>
+                        Children's Privacy
+                        8.1. Cascade API is not intended for use by individuals under the age of 13. We do not
+                        knowingly collect personal information from children. If we become aware that we have
+                        collected data from a child under 13, we will take appropriate steps to delete the information.
+                        <br><br>
+                        Changes to this Privacy Policy
+                        9.1. We may update this Privacy Policy from time to time to reflect changes in our
+                        practices or for other operational, legal, or regulatory reasons. We encourage you to
+                        review this page periodically for the latest information.
+                        <br><br>
+                        By registering as a member, you agree to our Terms and Conditions and our Privacy policy.
+                        <br><br>
+                        Thank you for using Cascade API.
+                        If you have any questions or concerns about these Terms and Conditions or our Privacy Policy,
+                        please reach out to us at cascadeapi.official@gmail.com .
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

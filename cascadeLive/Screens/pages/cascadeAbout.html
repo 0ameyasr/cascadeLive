@@ -1,0 +1,764 @@
+<!-- this is the about page for Cascade API-->
+
+<!-- !DOCTYPE html is a must to prevent Quirk's Mode-->
+<!DOCTYPE html>
+
+<!-- head of the page-->
+<head>
+    <!-- basic title, links for the page icon and the local and BootStrap 5.0 scripts and stylesheets-->
+    <title>
+        Cascade API - About
+    </title>
+
+    <!--necessary metadata for character set encoding and responsive scales-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!--link local icon,stylesheet and script-->
+    <link rel="icon" href="..\assets\cascadeIcon3D.png">
+    <link rel="stylesheet" href="..\stylesheets\cascadeAboutSS.css">
+    <script src="..\scripts\cascadeAboutScript.js"></script>
+
+    <!--link Bootstrap 5.0 CDN , stylesheets and scripts-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+        </script>
+    
+    <!--google fonts cdn call-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<!--body of the page-->
+<body>
+    <!--page division using a grid that masks the body, full size-->
+    <div id="transition-bar"></div>
+    <div class="page-division">
+        <!--icon in the header bar-->
+        <div class="page-division-child" id="icon" background="..\assets\ai2.gif" onclick="window">
+            <img src="..\assets\cascadeAPI.png">
+        </div>
+        <!--small division bar for the page-->
+        <div class="page-division-child" id="division-bar"></div>
+        <!--welcome message menu fill bar-->
+        <div class="fs-6 text-wrap page-division-child" id="menu-fill"></div>
+
+        <!--new page division child for dropdown menu-->
+        <div class="page-division-child" id="menu">
+            <!-- dropdown menu, implemented using Bootstrap 5.0 extension-->
+            <div class="dropdown">
+                <button class=" btn btn-secondary dropdown-toggle" type="button" id="menu-button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    MENU
+                </button>
+                <!--we have overriden certain dropdown classes to fit to our website's theme denoted by
+                   class-overriden -->
+                <ul class="dropdown-menu dropdown-menu-dark-override" aria-labelledby="menu-button">
+                    <li><a class="dropdown-item" id="to-home" href="..\pages\cascadeHome.html"> Home</a></li>
+                    <li><a class="dropdown-item" id="to-about" href="..\pages\cascadeAbout.html">About</a></li>
+                    <li><a class="dropdown-item" id="to-products" href="..\pages\cascadeProducts.html">Products</a></li>
+                    <li>
+                        <hr class="dropdown-divider-overidden">
+                    </li>
+                    <li><a class="dropdown-item" id="to-cider" href="..\pages\CIDEr.html"
+                            title="Cascaded Integrity Development Environment Script">CIDEr API</a></li>
+                    <li><a class="dropdown-item" id="to-cde" href="..\pages\CDE.html"
+                            title="Cascaded Developer's Edition API Kit">CDE
+                            API</a></li>
+                    <li><a class="dropdown-item" id="to-cede" href="..\pages\CLE.html"
+                            title="Cascaded Learner's Edition API Kit">CLE
+                            API</a></li>
+                    <li><a class="dropdown-item" id="to-cste" href="..\pages\CSTe.html"
+                            title="Cascaded Simulation and Testing API Kit">CSTe API</a></li>
+                    <li>
+                        <hr class="dropdown-divider-overidden">
+                    </li>
+                    <li><a class="dropdown-item" id="to-register" href="..\pages\cascadeRegister.html">Register</a></li>
+                    <li><a class="dropdown-item" id="to-contact" href="..\pages\cascadeContact.html">Contact
+                            Us</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!--masking division-->
+        <div class="header-bar"></div>
+        <!--offcanvas that is triggered on pressing Quick Access-->
+        <div class="side-bar">
+            <div class="offcanvas offcanvas-start override" data-bs-scroll="false" tabindex="-1"
+                id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+                <div class="offcanvas-header override">
+                    <h3 class="offcanvas-title override" id="offcanvasWithBothOptionsLabel">Quick Access</h3><br>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body override">
+                    <a class="inline-link expand" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne"
+                        aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                        About Project Cascade (+)
+                    </a><br>
+                    <a class="inline-link menu" href="#aboutProj">About the Project</a><br>
+                    <a class="inline-link menu" href="#preProj">Prerequisites, Capabilities and CIDEr</a><br>
+                    <a class="inline-link menu" href="#contProj">Contribution</a><br>
+                    <a class="inline-link menu" href="#impProj">Implementation</a>
+                    <br><br>
+                    <a class="inline-link expand" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo"
+                        aria-expanded="true" aria-controls="panelsStayOpen-collapseTwo">
+                        About CIDEr Script (+)
+                    </a><br>
+                    <a class="inline-link menu" href="#aboutCIDEr">About CIDEr Script</a><br>
+                    <a class="inline-link menu" href="#preCIDEr">Prerequisites</a><br>
+                    <a class="inline-link menu" href="#capCIDEr">Capabilities</a><br>
+                    <a class="inline-link menu" href="#langCIDEr">Language</a><br>
+                    <a class="inline-link menu" href="#reqCIDEr">Minimum Requirements</a>
+                    <br><br>
+                    <a class="inline-link expand" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree"
+                        aria-expanded="true" aria-controls="panelsStayOpen-collapseThree">
+                        About CDE (+)
+                    </a><br>
+                    <a class="inline-link menu" href="#aboutCDE">About CDE SDK</a><br>
+                    <a class="inline-link menu" href="#capCDE">Capabilities</a><br>
+                    <a class="inline-link menu" href="#footCDE">Footnote CDE</a><br>
+                    <br>
+                    <a class="inline-link expand" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFour"
+                        aria-expanded="true" aria-controls="panelsStayOpen-collapseFour">
+                        About CLE (+)
+                    </a><br>
+                    <a class="inline-link menu" href="#aboutCLE">About CLE</a><br>
+                    <a class="inline-link menu" href="#capCLE">Capabilities</a><br>
+                    <a class="inline-link menu" href="#ideCLE">IDE/VM support</a><br>
+                    <br><br>
+                    <a class="inline-link expand" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseFive"
+                        aria-expanded="true" aria-controls="panelsStayOpen-collapseFive">
+                        About CSTe (+)
+                    </a><br>
+                    <a class="inline-link menu" href="#aboutCSTe">About the Project</a><br>
+                    <a class="inline-link menu" href="#capCSTe">Predicted Capabilities</a><br>
+                    <br>
+                </div>
+            </div>
+        </div>
+        <!--quick access button container-->
+        <div class="quick-access-container">
+            <button id="qa-button" class="quick-access" data-bs-target="#offcanvasWithBothOptions"
+                aria-controls="offcanvasWithBothOptions">
+                Quick <font style="color:red">Access</font>
+            </button>
+        </div>
+        <!-- accordion containing all of the information-->
+        <div class="accordion-container">
+            <!-- accordion item for Project Cascade-->
+            <div class="accordion override" id="accordionPanelsStayOpenExample">
+                <div class="accordion-item override">
+                    <h2 class="accordion-header override" id="panelsStayOpen-headingOne">
+                        <button class="accordion-button override" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                            aria-controls="panelsStayOpen-collapseOne">
+                            About Project Cascade
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse"
+                        aria-labelledby="panelsStayOpen-headingOne">
+                        <div class="accordion-body override">
+                            <div class="image-under-accordion" id="cascadeIcon">
+                                <img src="../assets/cascadeIcon3D.png">
+                            </div>
+                            <p>
+                            <h5 class="caption" id="aboutProj">&#9617;About the Project</h5>
+                            Project Cascade is a set of rich <font style="color:red">API</font> that serves various
+                            purposes.
+                            It was originally designed to translate programming languages into simpler
+                            code that could vary based on their order of condensation. Multiple lines of code
+                            can be condensed into shorter and more powerful versions. Besides from its fluent
+                            programming language translation skills, it is capable of providing suggestions and
+                            free test cases originating from our robust natural language models. Our API's are
+                            divided into capability-based kits, from learning to developing and also testing.
+                            </p>
+                            <p>
+                            <h5 class="caption" id="preProj">&#9617;Prerequisites, Capabilities and CIDEr</h5>
+                            Installing any of our API Kit's does not require prerequisites, other than the
+                            software and applications that you wish to embed with our API Kits. It's simple and
+                            free. <font style="color:red">You may face compatibility issues</font>, so it's
+                            important that you make sure our API Kits are compatible with your software applications,
+                            <font style="color:red">using our CIDEr ScriptHandlers</font>
+                            that test your programs automatically for compatibility.
+                            </p>
+                            <p>
+                                Our Kits are categorised into the following:
+                            <ul>
+                                <li>
+                                    Optimising Capabilities (CDE-API SDK)
+                                </li>
+                                <li>
+                                    Teaching Capabilities (CLE-API)
+                                </li>
+                                <li>
+                                    Testing and Simulating Capabilities (CSTe-API SDK)
+                                </li>
+                            </ul>
+                            </p>
+                            <p>
+
+                                As a standalone component, Project Cascade only exists in the avatar of <font
+                                    style="color:red">CIDEr
+                                </font>, our
+                                flagship natural language model-based script. CIDEr is what runs all of our kits.
+                                We haven't mastered this model yet, and are open to let other talented developers
+                                contribute to our project and trust us,<font style="color:#ffd700"> it just
+                                    requires a registration.</font>
+                                Each API is based on language-compatibility (like JS, C, Python compatibility etc.) and
+                                can be
+                                installed and used in various IDE's and VM's to help developers.
+
+                            </p>
+                            <p>
+                            <h5 class="caption" id="contProj">&#9617;Contribution</h5>
+                            <font style="color:red">We are 100% Open source and do not accept any donations.</font>
+                            The best you can do to contribute
+                            is use our kits. If you're interested in our project - you can register as a developing
+                            contributor or a tester, on our <a class="inline-link" href="../pages/cascadeRegister.html">Register</a> page.
+                            </p>
+                            <p>
+                            <h5 class="caption" id="impProj">&#9617;Implementation</h5>
+                            The Cascade IDE (CIDE) is a powerful IDE and provides an environment
+                            to run multiple programming languages and CIDEr Script together, even simultaneously. It is
+                            basically built upon an <font style="color:red">Artificially Intelligent Two-Pass Assembler
+                                (capable of interpreting and compiling)</font>
+                            that can practically run any compatible language. Downloading the CIDE environment
+                            will give a full-scale reflexive experience of operating with our API Kits since all of
+                            them are built-in our integrated environment. While this can give you an expansive
+                            experience
+                            of our kits, it doesn't mean you can't implement our interfaces into other IDE's. However,
+                            we
+                            assure you - <font style="color:red">CIDE</font>
+                            <font style="color:#ffd700">is all that
+                                you will need.</font>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- accordion item for CIDEr-->
+                <div class="accordion-item override">
+                    <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                        <button class="accordion-button collapsed override" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                            aria-controls="panelsStayOpen-collapseTwo">
+                            About CIDEr Script
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
+                        aria-labelledby="panelsStayOpen-headingTwo">
+                        <div class="accordion-body override">
+                            <div class="image-under-accordion">
+                                <img src="../assets/CIDEr.gif">
+                            </div>
+                            <p>
+                            <h5 class="caption" id="aboutCIDEr">&#9617;About CIDEr</h5>
+                            <font style="color:red;">CIDEr</font> stands for
+                            <font style="color: #ffd700;">Cascaded Integrity Development Environment. </font>
+                            It is a powerful
+                            scripting tool that translates almost ALL compatible languages into a logical constructs
+                            that can be interpreted into the required destination language, thereby acting as a
+                            translating tool for compatible languages.
+                            <font style="color:red">
+                                While it may sound superficial, we've
+                                made it possible. </font>
+                            </p>
+                            <p>
+                            <h5 class="caption" id="preCIDEr">&#9617;Prerequisites</h5>
+                            There are a few prerequisites while installing CIDEr:
+                            <ul>
+                                <li>
+                                    Installing CIDEr ScriptHandler
+                                </li>
+                                <li>
+                                    Installation of target application/program/
+                                    environment
+                                </li>
+                            </ul>
+                            </p>
+                            <p>
+                                Once you've downloaded the ScriptHandler, there's a set of commands you will have to
+                                execute to pair CIDEr with your targets.
+                                <font style="color:#ffd700">CIDEr too has variants, which range from
+                                    CIDEr for IDE's, VM's to simple CIDEr for scripts. </font>
+                                Each variant has a catalog of
+                                information and steps on our <a class="inline-link" href="../pages/CIDEr.html">CIDEr</a>
+                                page.
+                            </p>
+                            <p>
+                            <h5 class="caption" id="capCIDEr">&#9617;Capabilities</h5>
+                            We understand if you're doubting the capabilities of CIDEr, so here's a brief insight
+                            of it's powerful capabilities:
+                            <ul>
+                                <li>
+                                    Provides easy, natural language based syntaxes that are logically
+                                    distributed and can be changed flexibly.
+                                </li>
+                                <li>
+                                    Has an in-built self indentation wrap that sorts tokenised priorities
+                                    based on its levels of indentation.
+                                </li>
+                                <li>
+                                    Compresseses and compiles the program code into it's constructs automatically
+                                    without any user prompt, provided it is given the proper interface.
+                                </li>
+                                <li>
+                                    Turns the program into structures that are common across languages and can be
+                                    understood by various compilers and interpreters that are embedded with CIDEr
+                                    based script handlers.
+                                </li>
+                                <li>
+                                    Capable of converting algorithms into destination code in the language preferred
+                                    by the developer.
+                                </li>
+                                <li>
+                                    If you don't feel like converting entire programs into our script, CIDEr is also
+                                    capable of making custom keywords and structures that you can use multiple times
+                                    within global or local files. It's flexible and very modular.
+                                </li>
+                            </ul>
+                            </p>
+                            <p>
+                            <h5 class="caption" id="langCIDEr">&#9617;Language Support (Basic and Extended)</h5>
+                            <font style="color:#ffd700">CIDEr Script is best used with our CIDEr IDE</font>
+                            which is capable of running and officially
+                            supporting a large amount of programming languages, some of which are:
+                            <p>
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <tr>
+                                        <th>Language</th>
+                                        <th>Language List</th>
+                                    </tr>
+                                    <tr>
+                                        <td>Array Based</td>
+                                        <td>Fortran 90, IDL, Julia, MATLAB,
+                                            Mathematica (Wolfram)
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Command-Line Interface</td>
+                                        <td>DOS Batch, Powershell
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Compiler Based</td>
+                                        <td>BCPL, BASIC, C++, C#,
+                                            D, Pascal, C (Objective),
+                                            Visual Basic (VB), Rust,
+                                            Java
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Data Oriented</td>
+                                        <td>SQL
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Embeddable-Server</td>
+                                        <td>
+                                            PHP, VBScript, WebDNA
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Embeddable-Client</td>
+                                        <td>
+                                            JavaScript, ActionScript
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Object Code</td>
+                                        <td>
+                                            Python, Ruby
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Extended Support</td>
+                                        <td>
+                                            HTML, CSS , SASS (CSS preprocess), R,
+                                            JSON, LaTeX, XML, Swift, XHTML (pre-),
+                                            F#, Groovy, Razor, SCSS
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            </p>
+                            <i style="color:red">Any language other than the aforementioned is not implicitly supported
+                                by Cascade. However, prototype (pre-) extensions can be downloaded from
+                                external sources to embed into Cascade for experimental or personal uses
+                                and purposes.</i>
+                            </p>
+                            <p>
+                            <h5 class="caption" id="reqCIDEr">&#9617;Minimum Requirements</h5>
+                            Our API Kits are pretty system-friendly and require minimal system requirements,
+                            however; here are a few technicalities:
+
+                            Hardware:
+                            <ul>
+                                <li>CPU: dual-core clocked @ >1.2GHz
+                                <li>RAM: 1GB</li>
+                            </ul>
+
+                            Software / Platforms:
+                            <ul>
+                                <li>Windows 7</li>
+                                <li>macOS 10.0</li>
+                                <li>Ubuntu Desk.16.04 /Linux Debian 9</li>
+                                <li>Red Hat Enterprise Linux 7</li>
+
+                                For Linux Users, GLIBCXX 3.4.21 / GLIBC 2.17
+                                or later is necessary.
+                            </ul>
+
+                            Alongside these, please also consider the requirements of applications, programs,
+                            compilers and modules you will be using with Cascade API.
+                            </p>
+                            <p>
+                                To get started, check out <a class="inline-link" href="CIDEr.html">CIDEr</a>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!--accordion item for CDE-->
+                <div class="accordion-item override">
+                    <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                        <button class="accordion-button collapsed override" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                            aria-controls="panelsStayOpen-collapseThree">
+                            About CDE
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
+                        aria-labelledby="panelsStayOpen-headingThree">
+                        <div class="accordion-body override">
+                            <div class="image-under-accordion">
+                                <img src="../assets/CDE.gif">
+                            </div>
+                            <p>
+                            <h5 class="caption" id="aboutCDE">&#9617;About CDE</h5>
+                            CDE stands for <font style="color:red;">Cascaded Development Environment.</font>
+                            This <font style="color:#ffd700">Software Development Kit (SDK)</font>
+                            demonstrates our Optimising Capabilities and is intended for the use of developers
+                            will to optimise their applications and programs. Since this is a multifaceted
+                            platform, developers will have to check for compatibility with CIDEr based ScriptHandlers
+                            and their targets. CDE comes installed with:
+                            <ul>
+                                <li>
+                                    CDE Development Kit SDK <font style="color:#ffd700">(versions -v0 to -v2.1)</font>
+                                </li>
+                                <li>
+                                    CIDEr ScriptHandler <font style="color:#ffd700">(versions -a,-b,-g -v0/1/2)</font>
+                                </li>
+                                <li>
+                                    CIDE Virtual Machine <font style="color:#ffd700">(version -a1.0+3)</font>
+                                </li>
+                                <li>
+                                    CDK (Expansions) <font style="color:#ffd700">(-dict 1.1.2)</font>
+                                </li>
+                                <li>
+                                    CIDE <font style="color:#ffd700">(generic versions -v1.0 to -v2.1.3)</font>
+                                </li>
+                                <li>
+                                    Cascade IBPEM <font style="color:#ffd700">(Interactive Bug Probing Extermination
+                                        Model
+                                        releases -a/-b/-g) </font>
+                                </li>
+                            </ul>
+                            All later versions of our kits and tools are expressed as extensions of our previous
+                            releases.
+                            <font style="color:red"> It is to be noted that ScriptHandler versions -a (alpha),-b
+                                (beta),-g (gamma) have various
+                                uses and purposes that are meant to be used and installed together.</font> The CDK
+                            Expansions kit is
+                            a library-based dictionary that contains extensions to various languages and commonly used
+                            software and virtual machines.<font style="color:#ffd700"> All installations can be
+                                customised and modified as per the
+                                developer's basis. A detailed insight into the contents of our kits will be available in
+                                our
+                                setup wizards upon installation.</font>
+                            </p>
+                            <p>
+                            <h5 class="caption" id="capCDE">&#9617;Capabilities</h5>
+                            Following are <font style="color:red">few of the capabilities</font> of our CDE SDK:
+                            <ul>
+                                <li>
+                                    Can run multiple source codes across different programming
+                                    languages simultaneously.
+                                </li>
+                                <li>
+                                    Can translate code from one compatible language to another
+                                    through our CIDEr script interfaces.
+                                </li>
+                                <li>
+                                    Helps build custom clauses, modular structures, methods and
+                                    commonly encountered conditions in CIDEr script that can
+                                    be used across various programs if globally defined.
+                                </li>
+                                <li>
+                                    Can link compatible modular languages and libraries from
+                                    various languages and external interfaces through it's porter
+                                    class systems.
+                                </li>
+                                <li>
+                                    Displays instantaneous output through live compiler listeners
+                                    as the developer launches the code. The directives and pre-
+                                    processing units too are mentioned in the console log.
+                                </li>
+                                <li>
+                                    Uses it's <font style="color:#ffd700">artificially intelligent dialect
+                                        dictionary (Toucan)</font> to
+                                    assess your programming and suggest changes and condensations
+                                    throughout development, also points out possible bugs and
+                                    loopholes (or even possible bottlenecks) through its
+                                    <font style="color:red">IBPEM model</font>.
+                                </li>
+                                <li>
+                                    Through the <font style="color:#ffd700">CIDE backed CPVAS (Cascaded Program Vital
+                                        Analysis and Screening)</font> system, it can perfrom advanced
+                                    space and time complexity and analysis of algorithms
+                                    and also make changes as per the requests sent to the
+                                    <font style="color:#ffd700">Natural Language Cascade User Interface (NLCUI) by the
+                                        developer.</font>
+                                </li>
+                                <li>
+                                    Can act as a request-response dynamo that can help communicate
+                                    requests faster and process responses at overclocked server
+                                    speeds.
+                                </li>
+                                <li>
+                                    Trace and profile bottlenecks and issues that may be possible during
+                                    run-time or that can cause underlying issues.
+                                </li>
+                                <li>
+                                    <font style="color:red">It can directly interact with the compiler
+                                        and optimise its issues
+                                        for more proficient and well-built byte/machine code</font>. It is also
+                                    capable of identifying redundant code and tackling it.
+                                </li>
+                                <li>
+                                    Through its parallel processing multithread observers, it can
+                                    break down the workload into smaller and more modular segments.
+                                </li>
+                            </ul>
+                            </p>
+                            <p>
+                            <h5 class="caption" id="footCDE">&#9617;Footnote</h5>
+                            The listed capabilities are not all of the capabilities of the CDE-SDK, these
+                            are the reported capabilities of our kit on the basis of numerous benchmark
+                            tests and capability-based examinations of our tool.
+
+                            To get started, check out <a class="inline-link" href="CDE.html">CDE</a>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!--accordion item for CLE-->
+                <div class="accordion-item override">
+                    <h2 class="accordion-header" id="panelsStayOpen-headingFour">
+                        <button class="accordion-button collapsed override" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false"
+                            aria-controls="panelsStayOpen-collapseFour">
+                            About CLE
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse"
+                        aria-labelledby="panelsStayOpen-headingFour">
+                        <div class="accordion-body override">
+                            <div class="image-under-accordion">
+                                <img src="../assets/CLE.gif">
+                            </div>
+                            <p>
+                            <h5 class="caption" id="aboutCLE">&#9617;About CLE</h5>
+                            <font style="color:red">CLE</font> stands for <font style="color:red">Cascaded Learning
+                                Environment</font>. This kit is simply an extension of the CDE variant since it
+                            <font style="color:#ffd700"> itself is present
+                                in the CDE SDK kit, under the CDK (Expansions) pack</font>.
+                            The CLE is designed to help beginners learn the basics of programming through
+                            it's educational programming tools.<i> It is an expansive tool that equips the
+                                learner with the basics of programming and the usual conventions.</i>
+                            </p>
+                            <p>
+                            <h5 class="caption" id="capCLE">&#9617;Capabilities</h5>
+                            CLE shares all the capabilities that CIDEr script and CDE possess, however here
+                            are a few unique capabilities that CLE possesses and is responsible for:
+                            <ul>
+                                <li>
+                                    CLE can provide dry runs and limiting cases for programs that are fed into
+                                    it through the <font style="color:red">NLCUI</font>.
+                                </li>
+                                <li>
+                                    CLE provides necessary suggestions and syntactical help to the beginner and
+                                    providing documentation for languages that the beginner is working in.
+                                </li>
+                                <li>
+                                    CLE has a built in multithreading process - the Interactive Bug
+                                    Probing Extermination Model <font style="color:#ffd700">IBPEM</font>,
+                                    it helps identify potential threats and bugs
+                                    to the flow of the program and hence exterminates them as quickly as
+                                    possible. This model is also capable of identifying bottlenecks and
+                                    loopholes in the program flow.
+                                </li>
+                                <li>
+                                    Within the CLE, the <font style="color:red">LDM (Learner Developer Modules)
+                                    </font> possess essential
+                                    documentation and builders that act as an interface for the learning
+                                    environment.
+                                </li>
+                            </ul>
+
+                            CLE is present within the CDK (Expansions) but, as an extension it solely possesses
+                            the LDM's and the <font style="color:red">EDENLM's (Education Edition Natural Language
+                                Models)
+                            </font>, that are
+                            plugins and modules that can be embedded into compatible IDE's and VM's as per the
+                            learner's preference.
+
+                            </p>
+                            <p>
+                            <h5 class="caption" id="ideCLE">&#9617;IDE/VM Support</h5>
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <tr>
+                                        <th>IDE/VM</th>
+                                        <th>Name</th>
+                                    </tr>
+                                    <tr>
+                                        <td>IDE's</td>
+                                        <td>
+                                            VS Code, IntelliJ IDEA, Eclipse, PyCharm,
+                                            Android Studio, Xcode, NetBeans, Sublime Text,
+                                            Atom, Microsoft Visual Studio (.NET/CPP/C#),
+                                            Jupyter Notebook, NetBeans, PHPStorm, WebStorm,
+                                            Code::Blocks, RubyMine, MATLAB, Brackets, Notepad++
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>VM's</td>
+                                        <td>Oracle VM VirtualBox, VMWare Workstation,
+                                            Microsoft Hyper-V, QEMU, Parallels (macOS),
+                                            Docker, KVM, Citrix Hypervisor, AWS EC2,
+                                            Google Cloud Compute Engine, VMware Fusion,
+                                            Virtual PC (Microsoft), GNS-3, Oracle VMSx86,
+                                            Google Cloud VMwE
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            </p>
+                            <p>
+                            <h5 class="caption" id="footCLE">&#9617;Footnote</h5>
+                            CLE is a part of the CDE SDK. If you are interested in installing CLE separately, download
+                            the CLE
+                            extensions and plugins for the IDE/VM. To get started, check out
+                            <a class="inline-link" href="CLE.html">CLE</a>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!--accordion item for CSTe-->
+                <div class="accordion-item override">
+                    <h2 class="accordion-header" id="panelsStayOpen-headingFive">
+                        <button class="accordion-button collapsed override" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false"
+                            aria-controls="panelsStayOpen-collapseFive">
+                            About CSTe
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse"
+                        aria-labelledby="panelsStayOpen-headingFive">
+                        <div class="accordion-body override">
+                            <div class="image-under-accordion">
+                                <img src="../assets/CSTe.gif">
+                            </div>
+                            <p>
+                            <h5 class="caption" id="aboutCSTe">&#9617;About CSTe</h5>
+                            CSTe stands for
+                            <font style="color:red">Cascaded Simulating and Testing Environment</font>
+                            . This is a special tool
+                            for testers that will make use of the <font style="color: #ffd700">IBPEM (Expanded) model
+                            </font>
+                            which is modelled on
+                            the testing capabilities of our project. <font style="color:red">The CSTe API Kit is
+                                not ready, and is still under development.</font>
+                            </p>
+                            <p>
+                            <h5 class="caption" id="capCSTe">&#9617;Predicted Capabilities</h5>
+                            The CSTe API Kit is predicted to be capable of:
+                            <ul>
+                                <li>
+                                    Generating load, stress, or endurance tests based upon the project it
+                                    is embedded to.
+                                </li>
+                                <li>
+                                    Monitoring resource usage, and provide performance metrics and reports to
+                                    identify bottlenecks and optimize system-software dynamics and interaction.
+                                </li>
+                                <li>
+                                    Incorporating security testing features to identify vulnerabilities and weaknesses
+                                    in the codebase.
+                                </li>
+                                <li>
+                                    Including tools for static code analysis, vulnerability scanning, and penetration
+                                    testing to detect potential
+                                    security risks and provide recommendations and actions for mitigating them.
+                                </li>
+                                <li>
+                                    The API can support testing to ensure that recent code changes or updates have
+                                    not introduced any new defects or caused unintended side effects.
+                                </li>
+                            </ul>
+                            </p>
+                            <p>
+                                CSTe is not <font style="color:#ffd700">fully-developed, and interested contributors
+                                    can refer to further details and
+                                    information through resources linked or stated through/at our</font>
+                                <a class="inline-link" href="CLE.html">CSTe</a> page.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br><br>
+        </div>
+
+        <!--back to top button-->
+        <a type="button" id="toTop" href="#icon">&uarr;</a>
+        <div class="page-divider"></div>
+
+        <!--last body content division segment for the home page, just a small footnote division-->
+        <div class="closing-bar">
+            <div class="fs-4 emblem-section">
+                <div>Cascade&nbsp;<font style="color: red;">API</font>
+                </div> &nbsp;&nbsp;
+                <span id="emblem">A 2 B</span>
+            </div>
+            <div class="description">
+                <font style="font-size:large;color:#ffd700;font-style: bold;">ABOUT OUR WEBSITE</font><br><br>
+                This website was developed by team A2B as an official domain for Cascade API. It highlights the
+                key features of our models and provides links to multiple sibling web-pages. All downloads and
+                links in this webpage and it's sibling pages are 100% official and safe.<br><br><i>
+                    Copyright &copy; A2B Technologies</i>
+            </div>
+        </div>
+        <!--page closing bar for the page closure-->
+        <div class="page-close">
+            <br>
+            <div class="page-close-bar" id="bar-one"></div><br>
+            <div class="page-close-bar" id="bar-two"></div><br>
+            <div class="page-close-bar" id="bar-three"></div>
+        </div>
+
+    </div>
+</body>
+
+</html>

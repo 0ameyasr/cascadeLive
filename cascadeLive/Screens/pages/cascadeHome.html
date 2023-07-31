@@ -1,0 +1,321 @@
+<!-- this is the home page for Cascade API-->
+
+<!-- !DOCTYPE html is a must to prevent Quirk's Mode-->
+<!DOCTYPE html>
+
+<!-- head of the page-->
+<head>
+    <!-- basic title, links for the page icon and the local and BootStrap 5.0 scripts and stylesheets-->
+    <title>
+        Cascade API - Home
+    </title>
+
+    <!--necessary metadata for character set encoding and responsive scales-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!--link local icon,stylesheet and script-->
+    <link rel="icon" href="..\assets\cascadeIcon3D.png">
+    <link rel="stylesheet" href="..\stylesheets\cascadeHomeSS.css">
+    <script src="..\scripts\cascadeHomeScript.js"></script>
+
+    <!--link Bootstrap 5.0 CDN , stylesheets and scripts-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+        </script>
+    
+    <!--import google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<!--body of the page-->
+<body>
+    <!--page division using a grid that masks the body, full size-->
+    <div class="page-division">
+        <!--icon in the header bar-->
+        <div class="page-division-child" id="icon" background="..\assets\ai2.gif"><img src="..\assets\cascadeAPI.png">
+        </div>
+        <!--small division bar for the page-->
+        <div class="page-division-child" id="division-bar"></div>
+        <!--welcome message menu fill bar-->
+        <div class="fs-6 text-wrap page-division-child" id="menu-fill"></div>
+
+        <!--new page division child for dropdown menu-->
+        <div class="page-division-child" id="menu">
+            <!-- dropdown menu, implemented using Bootstrap 5.0 extension BS5.0-->
+            <div class="dropdown">
+                <button class=" btn btn-secondary dropdown-toggle" type="button" id="menu-button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    MENU
+                </button>
+                <!--we have overriden certain dropdown classes to fit to our website's theme denoted by
+                   class-overriden -->
+                <ul class="dropdown-menu dropdown-menu-dark-override" aria-labelledby="menu-button">
+                    <li><a class="dropdown-item" id="to-home" href="..\pages\cascadeHome.html">Home</a></li>
+                    <li><a class="dropdown-item" id="to-about" href="..\pages\cascadeAbout.html">About</a></li>
+                    <li><a class="dropdown-item" id="to-products" href="..\pages\cascadeProducts.html">Products</a></li>
+                    <li>
+                        <hr class="dropdown-divider-overidden">
+                    </li>
+                    <li><a class="dropdown-item" id="to-cider" href="..\pages\CIDEr.html"
+                            title="Cascaded Integrity Development Environment Script">CIDEr API</a></li>
+                    <li><a class="dropdown-item" id="to-cde" href="..\pages\CDE.html"
+                            title="Cascaded Developer's Edition API Kit">CDE
+                            API</a></li>
+                    <li><a class="dropdown-item" id="to-cede" href="..\pages\CLE.html"
+                            title="Cascaded Learner's Edition API Kit">CLE
+                            API</a></li>
+                    <li><a class="dropdown-item" id="to-cste" href="..\pages\CSTe.html"
+                            title="Cascaded Simulation and Testing API Kit">CSTe API</a></li>
+                    <li>
+                        <hr class="dropdown-divider-overidden">
+                    </li>
+                    <li><a class="dropdown-item" id="to-register" href="..\pages\cascadeRegister.html">Register</a></li>
+                    <li><a class="dropdown-item" id="to-contact" href="..\pages\cascadeContact.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!--second page content division block-->
+        <div class="page-division-child" id="content-body" style="color: black;">
+            <!--head bar within this body content division-->
+            <div class="page-division-child head-bar">
+                <h2 style="text-align: justify;">
+                    Make Programming <font style="color:#ffd700">Easier</font>
+                    <small class="text-muted">using our multifaceted API.</small>
+                </h2>
+                <br>
+                <p>Go to our <a class="inline-link" href="..\pages\cascadeProducts.html">Products</a> page to get
+                    started!
+                </p>
+            </div>
+
+            <!--body content segment one , other than the head-bar child-->
+            <div class="child-division div-child-one">
+
+                <div class="fs-6 text-child-division div-one">
+                    <p>
+                        Cascade <font style="color:red">API</font> is a multifaceted collection of API's that serve
+                        various purposes. We build these for
+                        <font style="color:#ffd700">developers, learners and testers</font> all around the world. From
+                        learning to developing to testing,
+                        we have got you secured.
+                        Our <font style="color:#ffd700">downloads</font> are totally <font style="color:#ffd700">free
+                        </font>, and being an open source
+                        initiative, we also <font style="color:#ffd700">allow you to contribute</font>. Register
+                        as a member, contributor or a tester at our
+                        <a class="inline-link" href="..\pages\cascadeRegister.html">Register</a> page.
+                    </p>
+                </div>
+                <div class="text-child-division div-two"></div>
+            </div>
+            <!-- a small page divider-->
+            <hr class="page-divider">
+
+            <!--body content segment two -->
+            <div class="child-division div-child-two">
+                <div class="text-child-division div-three"></div>
+                <div class="text-child-division div-four">
+                    <p>
+                        <font style="font-size:large;color:red;">Why Cascade?</font><br><br>
+                        Cascade signifies <font style="color:#ffd700">flow of knowledge</font> and everlasting
+                        transition. Our models are so defined to
+                        serve the name it's purpose. The API kit's can not only be used in your projects but also can
+                        they
+                        can be installed and embedded into the IDE you're most comfortable with. Cascade is available in
+                        three primary editions each intricately of which are designed for your needs. Learn more about
+                        us at our
+                        <a class="inline-link" href="..\pages\cascadeAbout.html">About</a> page.
+                        <br>
+                    </p>
+                </div>
+            </div>
+            <hr class="page-divider">
+
+            <!--body content segment three, that precedes the API flexbox-->
+            <br>
+            <center>
+                <div class="h2" id="greetAPI">Meet our API.</div>
+                <div class="child-division div-child-three">
+                    <div id="CIDEr-icon">
+                        <img id="CIDEr" onmouseover="highlight(this.id,1)" onmouseleave="reset(this.id);"
+                            src="..\\assets\\CIDEr.png" title="Cascaded Integrity Development Environment Script"
+                            onclick="window.open('..\\pages\\CIDEr.html',target='_self');">
+                    </div>
+                    <div id="CDE-icon">
+                        <img id="CDE" onmouseover="highlight(this.id,2)" onmouseleave="reset(this.id);"
+                            src="..\\assets\\CDE.png" title="Cascaded Development Environment API Kit"
+                            onclick="window.open('..\\pages\\CDE.html',target='_self');">
+                    </div>
+                    <div id="CSTe-icon">
+                        <img id="CSTe" onmouseover="highlight(this.id,3)" onmouseleave="reset(this.id);"
+                            src="..\\assets\\CSTe.png" title="Cascaded Simulation and Testing API Kit"
+                            onclick="window.open('..\\pages\\CSTe.html',target='_self');">
+                    </div>
+                    <div id="CLE-icon">
+                        <img id="CLE" onmouseover="highlight(this.id,4)" onmouseleave="reset(this.id);"
+                            src="..\\assets\\CLE.png" title="Cascaded Learner's Environment API Kit"
+                            onclick="window.open('..\\pages\\CLE.html',target='_self');">
+                    </div>
+                </div>
+            </center>
+            <hr class="page-divider">
+
+            <!--body content division segment four, for contact mentions and further details -->
+            <div class="child-division div-child-four">
+                <div class="fs-6 text-child-division div-five">
+                    <p>
+                        <font style="font-size:large;color:red;">You can be a part of us!</font><br><br>
+                        Head on to our <a class="inline-link" href="..\pages\cascadeRegister.html">Register</a> page
+                        to register
+                        as a contributing developer or a tester. Remember, you need to register to use Cascade,
+                        but it's free of cost and hastle. We offer you an oppurtunity to become a contributing
+                        developer,
+                        and to do so, we need to get to know you better.
+                        <br><br> For more specific enquiries, visit our
+                        <a class="inline-link" href="..\pages\cascadeContact.html">Contact</a> page.
+                    </p>
+                </div>
+                <div class="text-child-division div-six"></div>
+            </div>
+            <hr class="page-divider">
+
+            <!--just a simple animation division, felt like a decent addition to the home page.-->
+            <div class="child-division div-child-six" id="pre-message-one">
+                <h1 id="cascade-intro">Proactive.</h1>
+            </div>
+            <hr class="page-divider">
+
+            <!--a division where we add extra information describing the motto of the project BS5.O-->
+            <div class="child-division div-child-seven">
+                <!--uses BS5.0-->
+                <div class="d-flex align-items-start" id="nav-pills">
+                    <div class="nav flex-column nav-pills override me-3" id="v-pills-tab" role="tablist"
+                        aria-orientation="vertical">
+                        <button class="nav-link active override" id="v-pills-home-tab" data-bs-toggle="pill"
+                            data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home"
+                            aria-selected="true">Proactive</button>
+                        <button class="nav-link override" id="v-pills-profile-tab" data-bs-toggle="pill"
+                            data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile"
+                            aria-selected="false">Predictive</button>
+                        <button class="nav-link override" id="v-pills-messages-tab" data-bs-toggle="pill"
+                            data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages"
+                            aria-selected="false">Powerful</button>
+                    </div>
+                    <div class="tab-content override" id="v-pills-tabContent">
+                        <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel"
+                            aria-labelledby="v-pills-home-tab">
+                            <p style="text-align: justify;font-size: 0.8em;">
+                                Cascade <font style="color: red;">API</font>
+                                is distinguished by its <font style="color: #ffd700">remarkable proactiveness</font>
+                                 which empowers developers
+                                with an agile and responsive programming experience. Through its cutting-edge
+                                capabilities,
+                                Cascade API not only translates complex programming languages into simpler code but also
+                                anticipates potential bottlenecks and vulnerabilities in the development process. By
+                                employing
+                                advanced algorithms and <font style="color: #ffd700">AI-driven models</font>, Cascade API 
+                                can detect and rectify issues<font style="color: red;"> even
+                                before
+                                they manifest</font>, allowing developers to tackle challenges with foresight and precision.
+                                This proactiveness
+                                enhances productivity, reduces debugging time, and ultimately leads to the creation of
+                                more efficient
+                                and robust applications.
+                                <i>With Cascade API's forward-thinking approach, developers can stay ahead
+                                of the curve in an ever-evolving technological landscape.</i>
+                            </p>
+                        </div>
+                        <div class="tab-pane fade" id="v-pills-profile" role="tabpanel"
+                            aria-labelledby="v-pills-profile-tab">
+                            <p style="text-align: justify;font-size: 0.8em;">
+                                Cascade <font style="color: red;">API</font> is built on predictability-based API and AGI models.
+                                Leveraging its comprehensive understanding of various programming languages, <font style="color:#ffd700">
+                                    the API can
+                                accurately anticipate the outcomes of code executions</font>. This predictive ability is
+                                achieved
+                                through advanced machine learning models that analyze code structures and patterns,
+                                allowing
+                                developers to foresee potential errors and optimize their solutions.<font style="color: red"> By providing
+                                insights</font>
+                                into
+                                the expected behavior of the code, Cascade API empowers developers to make informed
+                                decisions and
+                                fine-tune their algorithms for superior performance. This
+                                predictiveness saves valuable development time and enhances code reliability, <font style="color: #ffd700">
+                                    making it
+                                an
+                                indispensable tool for software creators.</font>
+                            </p>
+                        </div>
+                        <div class="tab-pane fade" id="v-pills-messages" role="tabpanel"
+                            aria-labelledby="v-pills-messages-tab">
+                            <p style="text-align: justify;font-size: 0.8em;">
+                                The power of Cascade <font style="color:red">API</font> lies in its 
+                                transformative impact on the programming landscape.
+                                As a multifaceted collection of API kits, it <font style="color:#ffd700">equips developers, learners, and testers
+                                </font>with
+                                an arsenal of tools to meet their diverse needs. The API's ability to seamlessly
+                                translate
+                                code between different languages, optimize algorithms, and perform comprehensive testing
+                                is
+                                a testament to its robustness and versatility. Additionally, its <font style="color:red">integration
+                                 with IDEs
+                                and
+                                VMs enhances the development workflow</font> and fosters a seamless coding experience. Cascade
+                                API's
+                                powerful features and unparalleled performance make it a driving force behind innovative
+                                software development, unlocking new possibilities and <font style="color:#ffd700">empowering developers to create
+                                cutting-edge applications with ease.</font>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- stagnant video -->
+                <video src="../assets/tabBack.mp4" autoplay muted loop></video>
+            </div>
+            <hr class="page-divider">
+
+            <!--floating back to top button-->
+            <a type="button" id="toTop" href="#icon">&uarr;</a>
+
+            <!--last body content division segment for the home page, just a small footnote division-->
+            <div class="child-division div-child-five">
+                <div class="fs-4 text-child-division div-seven">
+                    <div>Cascade&nbsp;<font style="color: red;">API</font></div> &nbsp;&nbsp;
+                    <span id="emblem">A 2 B</span>
+                </div>
+                <div class="text-child-division div-eight">
+                    <font style="font-size:large;color:#ffd700;font-style: bold;">ABOUT OUR WEBSITE</font><br><br>
+                    This website was developed by team A2B as an official domain for Cascade API. It highlights the
+                    key features of our models and provides links to multiple sibling web-pages. All downloads and
+                    links in this webpage and it's sibling pages are 100% official and safe.<br><br><i>
+                        Copyright &copy; A2B Technologies</i>
+                </div>
+            </div><br>
+
+            <!--random bars just to define page closure (aesthetic)-->
+            <div class="page-close" id="bar-one"></div><br>
+            <div class="page-close" id="bar-two"></div><br>
+            <div class="page-close" id="bar-three"></div>
+
+        </div>
+    </div>
+
+</body>
+
+<!--
+    Further Footnotes:
+
+    1] Wherever BS5.0 is written, BootStrap 5.0 has been used.
+-->
+
+</html>

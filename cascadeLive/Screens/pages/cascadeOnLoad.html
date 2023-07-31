@@ -1,0 +1,51 @@
+<!-- this page is just a loading page, in the sense that this links to the home page and just introduces the user 
+	 to the domain once they enter. The typewriting animations and stuff were not actually necessary, but they 
+	 happen to create a dynamic UI and simply make the page more attractive.
+-->
+<html>
+
+<!--link basic icons, stylesheets, scripts and required metadata for responsive interaction-->
+
+<head>
+	<title>Cascade API</title>
+	<!--responsive metadata-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!--link icon-->
+	<link rel="icon" href="..\assets\cascadeIcon3D.png">
+	<!--stylesheets,scripts,etc-->
+	<link rel="stylesheet" href="..\stylesheets\cascadeOnLoadSS.css">
+	<script src="..\scripts\cascadeOnLoadScript.js"></script>
+	<!--google fonts-->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<!--body triggers typewriting and progress animations on loading-->
+
+<body onload="loadingBlink()">
+	<!--loading Message (basic) -->
+	<center>
+		<p id="loadingMessage"></p>
+	</center>
+	<!-- the moving translucent progress backdrop-->
+	<div id="progress-bar-one"></div>
+	<br>
+	<!-- the sub-caption under the loadingMessage-->
+	<div id="welcome-note"></div>
+</body>
+
+</html>
+
+<!--
+	Further Footnotes:
+	1] This page is just for aesthetic purposes and will be first presented to the user. 
+	2] This page will redirect the user to the home page that will contain further links
+	   to all other pages.
+	3] The user is expected to stay on this page for a rough ~8 seconds.
+	4] All animations are done in 100% local scripts, No external API's and extensions 
+	   have been used.
+	5] This page also sets the theme of the website, which focuses on black, white, gray
+	   shades, gold and red.
+	6] The background in the page is a gif.
+-->

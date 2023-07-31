@@ -1,0 +1,200 @@
+<!-- this is the home page of our web development project, based on Casacade API-->
+
+<!-- !DOCTYPE html is a must to prevent Quirk's Mode-->
+<!DOCTYPE html>
+
+<!-- head of the page-->
+
+<head>
+    <!-- basic title, links for the page icon and the local and BootStrap 5.0 scripts and stylesheets-->
+    <title>
+        CDE SDK
+    </title>
+
+    <!--necessary metadata for character set encoding and responsive scales-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!--link local icon,stylesheet and script-->
+    <link rel="icon" href="..\assets\CDE.png">
+    <link rel="stylesheet" href="..\stylesheets\CDESS.css">
+    <script src="..\scripts\CDEScript.js"></script>
+
+    <!--link Bootstrap 5.0 CDN , stylesheets and scripts-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+        </script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<!--body of the page-->
+
+<body>
+    <!--page division using a grid that masks the body, full size-->
+    <div id="transition-bar"></div>
+
+
+    <div class="page-division">
+        <!--icon in the header bar-->
+        <div class="page-division-child" id="icon" background="..\assets\ai2.gif"><img src="../assets/CDEl.png">
+        </div>
+        <!--small division bar for the page-->
+        <div class="page-division-child" id="division-bar"></div>
+        <!--welcome message menu fill bar-->
+        <div class="fs-6 text-wrap page-division-child" id="menu-fill"></div>
+
+        <!--new page division child for dropdown menu-->
+        <div class="page-division-child" id="menu">
+            <!-- dropdown menu, implemented using Bootstrap 5.0 extension-->
+            <div class="dropdown">
+                <button class=" btn btn-secondary dropdown-toggle" type="button" id="menu-button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    MENU
+                </button>
+                <!--we have overriden certain dropdown classes to fit to our website's theme denoted by
+                   class-overriden -->
+                <ul class="dropdown-menu dropdown-menu-dark-override" aria-labelledby="menu-button">
+                    <li><a class="dropdown-item" id="to-home" href="..\pages\cascadeHome.html"> Home</a></li>
+                    <li><a class="dropdown-item" id="to-about" href="..\pages\cascadeAbout.html">About</a></li>
+                    <li><a class="dropdown-item" id="to-products" href="..\pages\cascadeProducts.html">Products</a></li>
+                    <li>
+                        <hr class="dropdown-divider-overidden">
+                    </li>
+                    <li><a class="dropdown-item" id="to-cider" href="..\pages\CIDEr.html"
+                            title="Cascaded Integrity Development Environment Script">CIDEr API</a></li>
+                    <li><a class="dropdown-item" id="to-cde" href="..\pages\CDE.html"
+                            title="Cascaded Developer's Edition API Kit">CDE
+                            API</a></li>
+                    <li><a class="dropdown-item" id="to-cede" href="..\pages\CLE.html"
+                            title="Cascaded Learner's Edition API Kit">CLE
+                            API</a></li>
+                    <li><a class="dropdown-item" id="to-cste" href="..\pages\CSTe.html"
+                            title="Cascaded Simulation and Testing API Kit">CSTe API</a></li>
+                    <li>
+                        <hr class="dropdown-divider-overidden">
+                    </li>
+                    <li><a class="dropdown-item" id="to-register" href="..\pages\cascadeRegister.html">Register</a></li>
+                    <li><a class="dropdown-item" id="to-contact" href="..\pages\cascadeContact.html">Contact
+                            Us</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!--basic header message-->
+        <div class="header-message">
+            <h3>C<font style="color:red">DE</font>
+            </h3>
+            <h6>For the developers.</h6>
+        </div>
+
+
+        <!--content section grid-->
+        <div class="content-section">
+            <div class="cde-dance">
+                <img src="../assets/CDE.gif">
+            </div>
+            <div class="product-description" id="cde"> 
+                <h1 class="product-heading">CDE Software Development Kit</h1><br>
+                <p style="text-align: justify;padding:15px;">
+                    CDE is our Cascaded Development Environment, which helps developers develop better and 
+                    create programs and applications that are responsible, efficient and highly optimised.
+                    To harness the best of our CDE, we recommend you to use our Cascaded Integrated 
+                    Development Environment (CIDE) that comes pre-installed with CIDEr and various other 
+                    important components that make it possible for you to use our API at their full 
+                    potential. 
+                    <br>
+                    <center>These downloads are only for contributors and testers. Members have restricted 
+                        access. <br>
+                        <font style="color:red">An authentication will be required in the setup wizard.</font></center>
+                </p>
+                <p style="text-align: justify;padding:15px;">
+                    All Cascade API downloads are cross-platform. If you haven't registered, you can always do 
+                    that for free over <a class="inline-link" href="../pages/cascadeRegister.html">here</a>.
+                </p>
+                <div class="product-description-body">
+                    <div class="table-responsive">
+                        <table class="table">
+                          <tr>
+                            <th>Product</th>
+                            <th>Version</th>
+                            <th>Installation</th>
+                          </tr>
+                          <tr>
+                            <td>CDE Development Kit (base)</td>
+                            <td>release -v2.1.0</td>
+                            <td><a class="download-icon-link"
+                                href="/cascadeLive/Installations/CDE-base-release-v210.zip" download><img class="download-icon" src="../assets/download.png"></a></td>
+                          </tr>
+                          <tr>
+                            <td>CIDE Virtual Machine</td>
+                            <td>release -a1.0+3</td>
+                            <td><a class="download-icon-link"
+                                href="/cascadeLive/Installations/CIDeVM-release-a10p3.zip" download><img class="download-icon" src="../assets/download.png"></a></td>
+                          </tr>
+                          <tr>
+                            <td>CDK (Expansions)</td>
+                            <td>release -dict 1.1.2</td>
+                            <td><a class="download-icon-link"
+                                href="/cascadeLive/Installations/CDKEX-release-dict112.zip" download><img class="download-icon" src="../assets/download.png"></a></td>
+                          </tr>
+                          <tr>
+                            <td>CIDEr ScriptHandler (generic)</td>
+                            <td>-a/-b/-g -v2.0+</td>
+                            <td><a class="download-icon-link"
+                                href="/cascadeLive/Installations/cde-generic-release-v200.zip" download><img class="download-icon" src="../assets/download.png"></a></td>
+                          </tr>
+                          <tr>
+                            <td>CIDE</td>
+                            <td>generic -v2.1.3</td>
+                            <td><a class="download-icon-link"
+                                href="/cascadeLive/Installations/CIDE-generic-release-v213.zip" download><img class="download-icon" src="../assets/download.png"></a></td>
+                          </tr>
+                          <tr>
+                            <td><font style="color:#ffd700">CDE SDK</font></td>
+                            <td><font style="color:#ffd700">generic release -v1.1.2</font></td>
+                            <td><a class="download-icon-link" 
+                                href="/cascadeLive/Installations/CDESDK-release-generic-v112.zip" download><img class="download-icon" src="../assets/download.png"></a></td>
+                          </tr>
+                        </table>
+                      </div>
+                </div>
+            </div>
+
+            <!--footer conclusion-->
+            <div class="closing-bar">
+                <div class="fs-4 emblem-section">
+                    <div>Cascade&nbsp;<font style="color: red;">API</font>
+                    </div> &nbsp;&nbsp;
+                    <span id="emblem">A 2 B</span>
+                </div>
+                <div class="description">
+                    <font style="font-size:large;color:#ffd700;font-style: bold;">ABOUT OUR WEBSITE</font><br><br>
+                    This website was developed by team A2B as an official domain for Cascade API. It highlights the
+                    key features of our models and provides links to multiple sibling web-pages. All downloads and
+                    links in this webpage and it's sibling pages are 100% official and safe.<br><br><i>
+                        Copyright &copy; A2B Technologies</i>
+                </div>
+            </div>
+            <!--page close bars-->
+            <div class="page-close">
+                <br>
+                <div class="page-close-bar" id="bar-one"></div><br>
+                <div class="page-close-bar" id="bar-two"></div><br>
+                <div class="page-close-bar" id="bar-three"></div>
+            </div>
+
+            <!--back to top button-->
+            <a type="button" id="toTop" href="#icon">&uarr;</a>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,447 @@
+/*universal selector for font*/
+* {
+    font-family: 'Microsoft JhengHei Light';
+    font-weight: bold;
+    color: white;
+}
+
+/*stylizing the grid of the page*/
+body {
+    /*any overflow in the x direction will be hidden,
+      as it is not required.*/
+    background-color: black;
+    animation: pop 1s linear;
+}
+
+
+.product-heading{
+    color: #ffd700;
+}
+
+/*body sized page division grid.*/
+.page-division {
+    /*grid display corresponding to 100% view-width and
+      100% view-height for a responsive environment*/
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+
+    /*header is of 9vh , a small divider of 1vh, and the
+      rest is the 1 fractional unit, auto-adjusting 
+      content, 20% each has been given to the icon and 
+      menu element, 60% for the menu header bar*/
+    grid-template-rows: 9% 1% 20% 100% 1% 50% 30%;
+    grid-template-columns: 20% 60% 20%;
+    
+    /*set bgcolor, overflows as required*/
+    background-color: black;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/*stylise the head bar of the page.*/
+.page-division-child.head-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: none;
+}
+.page-division-child.head-bar>p {
+    /*stylise the paragraph in the head bar*/
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+/* stylise header icon (Cascade API)*/
+#icon {
+    grid-row: 1/1;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.9);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+#icon>img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+#emblem {
+    font-weight: bold;
+    color: #ffd700;
+    border: 2px solid #ffd700;
+    padding: 0.5%;
+}
+
+/* small division bar*/
+#division-bar {
+    grid-row: 2/3;
+    grid-column: 1/4;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 1px solid black;
+}
+
+/*menu fill division in the head bar, displays random messages*/
+#menu-fill {
+    grid-row: 1/1;
+    grid-column: 2/3;
+    font-size: 0.8em;
+    text-align: center;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url("..\\assets\\menufill.gif");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+
+/*stylise the menu button*/
+#menu-button {
+    background-color: rgba(0, 0, 0, 0.1);
+    border: none;
+    box-shadow: none;
+}
+/*menu button hoverEvent*/
+#menu-button:hover {
+    color: red;
+    border: none;
+    outline: 0;
+}
+
+
+/*give background-color to overriden BootStrap(5.0) dropdown menu class*/
+ul.dropdown-menu-dark-override {
+    background-color: rgba(0, 0, 0, 1.0);
+    width: 100vw;
+}
+/*give white font color to list items*/
+.dropdown-menu .dropdown-item {
+    color: white;
+}
+/*drop-down item hover event*/
+.dropdown-menu .dropdown-item:hover {
+    color: red;
+    font-weight: bold;
+
+    /*a glow feature on text hover*/
+    animation: glow 3s linear;
+    animation-iteration-count: infinite;
+    text-decoration: underline;
+}
+/*Vanilla 100% CSS cyclic glow effect*/
+@keyframes glow {
+    0% {
+        color: #ffd700;
+    }
+
+    50% {
+        color: grey;
+    }
+
+    100% {
+        color: #ffd700;
+    }
+}
+
+/*stylise the menu division in the grid*/
+#menu {
+    grid-row: 1/1;
+    grid-column: 3/4;
+    background-color: black;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/*inline-link class for the inline link references*/
+.inline-link {
+    color: rgb(146, 158, 166);
+    text-decoration: none;
+}
+.inline-link:hover {
+    /*basic hoverEvent for the inline links*/
+    text-decoration:underline;
+    color: #ffd700;
+    cursor: pointer;
+}
+
+
+
+/*webkit-based scrollbar implementation styling*/
+::-webkit-scrollbar {
+    width: 9px;
+    height: 9px;
+}
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 1px 1px black;
+    border-radius: 0.15em;
+    border:2px solid black;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: gray;
+}
+
+
+/*exceptional media querying for certain absurd cases seen 
+  in Galaxy Fold and iPhone XR/SE editions*/
+@media(max-width:667px) {
+    .description{
+        font-size: 0.6em;
+    }
+
+    .text-child-division.div-four>p {
+        font-size: 0.6em;
+    }
+    #menu-button{
+        font-size:0.6em;
+    }
+    #menu-fill{
+        font-size: 0.9em;
+    }
+    table,tr,td,th{
+        font-size:0.8em;
+    }
+}
+@media(max-width:653px) {
+    .description {
+        font-size: 0.5em;
+    }
+
+    .menu-fill {
+        font-size: 0.1em;
+    }
+    #menu-button{
+        font-size:0.6em;
+    }
+    table,tr,td,th{
+        font-size:0.8em;
+    }
+}
+
+#table{
+    animation: fadeIn 5s linear;
+}
+@keyframes  fadeIn {
+    0%{
+        opacity: 0.0;
+    }
+    100%{
+        opacity: 1.0;
+    }
+}
+
+
+.header-message{
+    grid-row:3/4;
+    grid-column:2/3;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.header-message>h6{
+    background-color: rgba(255,255,255,0.1);
+    text-align: center;
+}
+.content-divider{
+    border: 3px solid white;
+}
+
+#cde{
+    grid-row: 3/4;
+    grid-column: 1/4;
+}
+#pagediv{
+    grid-row: 5/6;
+}
+.cde-dance{
+    grid-row:2/3;
+    grid-column:1/4;
+    background-color: rgba(255,255,255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cde-dance>img{
+    width: 300px;
+    height: 300px;
+}
+
+
+/*new stylisation*/
+.content-section{
+    grid-row:4/5;
+    grid-column:1/4;
+    height:80vh;
+    width:100vw;
+    display: grid;
+    grid-template-rows:auto auto auto auto 1% auto 30%;
+}
+.content-data{
+    text-align: justify;
+}
+table,tr,td,th{
+    text-align: center;
+}
+
+/*page-closing under footer*/
+.page-close{
+    grid-row:7/8;
+    grid-column: 1/4;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.page-close>div{
+    background-color: gray;
+    width:100%;
+}
+#bar-one{
+    height: 20%;
+}
+#bar-two{
+    height: 15%;
+}
+#bar-three{
+    height: 10%;
+}
+
+
+/*page divider class*/
+.page-divider{
+    grid-column: 1/4;
+    grid-row:5/6;
+    background-color: gray;
+}
+
+
+/*closing footer*/
+.closing-bar{
+    grid-row:6/7;
+    grid-column: 1/4;
+    display: flex;
+}
+.closing-bar>div{
+    width: 50%;
+    height: 100%;
+}
+.emblem-section {
+    background-color:  rgba(255, 255, 255, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.description {
+    grid-row: 1/1;
+    grid-column: 2/3;
+    flex-grow: 2;
+    font-size:0.7em;
+    background: rgba(255,255,255,0.1);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    padding:1%;
+    text-align:justify;
+}
+
+/*transition bar*/
+#transition-bar-one::after {
+    content: "";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index:10;
+    background: url('../assets/loading4.gif');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-color: gray;
+    animation: loading 2s linear;
+}
+@keyframes loading {
+    0% {
+        opacity: 1.0;
+    }
+    100%{
+        opacity: 0.0;
+    }
+}
+
+p{
+    text-align:justify;
+}
+p>i{
+    color:black;
+}
+/*override bs5.0 button*/
+.btn-secondary.override{
+    border-radius:0px;
+    background-color: rgba(0, 0, 0, 0.1);
+    color:black;
+}
+
+/*back to top button*/
+#toTop {
+    display: block; 
+    position: fixed;
+    height: 50px;
+    width: 50px;
+    bottom: 20px; 
+    right: 30px; 
+    z-index: 100; 
+    border: 2px solid white;
+    outline: none;
+    background-color: rgba(0,0,0,1);
+    color: white; 
+    cursor: pointer; 
+    padding: 10px; 
+    border-radius: 0px; 
+    text-decoration: none; 
+    text-align: center;
+}
+#toTop:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+    border:5px solid #ffd700;
+    animation: bounce 1s linear infinite;
+ }
+@keyframes bounce{
+    0%{
+        transform: scale(1.5) translateY(+2%);
+    }
+    25%{
+        transform: translateY(-1%);
+    }
+    75%{
+        transform: translateY(-1%);
+    }
+    100%{
+        transform: translateY(+2%);
+    }
+}
+
+/*download-icon bounce*/
+.download-icon{
+    width:30px;
+    height: 30px;
+}
+.download-icon:hover{
+    transform: scale(1.10);
+    animation: bounce 1s linear infinite;
+}
+th{
+    color:red;
+}

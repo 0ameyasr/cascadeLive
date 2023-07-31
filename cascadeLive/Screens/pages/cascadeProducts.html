@@ -1,0 +1,620 @@
+<!-- this page describes the products endorsed on the webpage -->
+
+<!-- !DOCTYPE html is a must to prevent Quirk's Mode-->
+<!DOCTYPE html>
+
+<!-- head of the page-->
+<head>
+    <!-- basic title, links for the page icon and the local and BootStrap 5.0 scripts and stylesheets-->
+    <title>
+        Cascade API - Products
+    </title>
+
+    <!--necessary metadata for character set encoding and responsive scales-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!--link local icon,stylesheet and script-->
+    <link rel="icon" href="..\assets\cascadeIcon3D.png">
+    <link rel="stylesheet" href="..\stylesheets\cascadeProductsSS.css">
+    <script src="..\scripts\cascadeProductsScript.js"></script>
+
+    <!--link Bootstrap 5.0 CDN , stylesheets and scripts-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+        </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+        integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+        </script>
+    
+    <!-- google fonts cdn call-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<!--body of the page-->
+<body>
+
+    <!--page division using a grid that masks the body, full size-->
+    <div id="transition-bar"></div>
+
+    <div class="page-division">
+        <!--icon in the header bar-->
+        <div class="page-division-child" id="icon" background="..\assets\ai2.gif"><img src="..\assets\cascadeAPI.png">
+        </div>
+        <!--small division bar for the page-->
+        <div class="page-division-child" id="division-bar"></div>
+        <!--welcome message menu fill bar-->
+        <div class="fs-6 text-wrap page-division-child" id="menu-fill"></div>
+
+        <!--new page division child for dropdown menu-->
+        <div class="page-division-child" id="menu">
+            <!-- dropdown menu, implemented using Bootstrap 5.0 extension-->
+            <div class="dropdown">
+                <button class=" btn btn-secondary dropdown-toggle" type="button" id="menu-button"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    MENU
+                </button>
+                <!--we have overriden certain dropdown classes to fit to our website's theme denoted by
+                   class-overriden -->
+                <ul class="dropdown-menu dropdown-menu-dark-override" aria-labelledby="menu-button">
+                    <li><a class="dropdown-item" id="to-home" href="..\pages\cascadeHome.html"> Home</a></li>
+                    <li><a class="dropdown-item" id="to-about" href="..\pages\cascadeAbout.html">About</a></li>
+                    <li><a class="dropdown-item" id="to-products" href="..\pages\cascadeProducts.html">Products</a></li>
+                    <li>
+                        <hr class="dropdown-divider-overidden">
+                    </li>
+                    <li><a class="dropdown-item" id="to-cider" href="..\pages\CIDEr.html"
+                            title="Cascaded Integrity Development Environment Script">CIDEr API</a></li>
+                    <li><a class="dropdown-item" id="to-cde" href="..\pages\CDE.html"
+                            title="Cascaded Developer's Edition API Kit">CDE
+                            API</a></li>
+                    <li><a class="dropdown-item" id="to-cede" href="..\pages\CLE.html"
+                            title="Cascaded Learner's Edition API Kit">CLE
+                            API</a></li>
+                    <li><a class="dropdown-item" id="to-cste" href="..\pages\CSTe.html"
+                            title="Cascaded Simulation and Testing API Kit">CSTe API</a></li>
+                    <li>
+                        <hr class="dropdown-divider-overidden">
+                    </li>
+                    <li><a class="dropdown-item" id="to-register" href="..\pages\cascadeRegister.html">Register</a></li>
+                    <li><a class="dropdown-item" id="to-contact" href="..\pages\cascadeContact.html">Contact
+                            Us</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!--basic header-->
+        <div class="header-message">
+            <h3>Our <font style="color:red">Products</font>
+            </h3>
+            <h6>Demonstrating our capabilities</h6>
+        </div>
+
+        <!--content section division grid-->
+        <div class="content-section">
+            <!--product description, CIDEr-->
+            <div class="product-description" id="ciderdesc">
+                <h1 class="product-heading">CIDEr Script</h1><br>
+                <div class="product-description-body">
+                    <ul class="nav nav-pills override mb-3" id="pills-tab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link override active" id="pills-cider-one-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-cider-one" type="button" role="tab"
+                                aria-controls="pills-cider-one" aria-selected="true">
+                                Assembler</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link override" id="pills-cider-two-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-cider-two" type="button" role="tab"
+                                aria-controls="pills-cider-two" aria-selected="false">
+                                Fabricizer</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link override" id="pills-cider-three-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-cider-three" type="button" role="tab"
+                                aria-controls="pills-cider-three" aria-selected="false">
+                                Translator</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link override" id="pills-cider-four-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-cider-four" type="button" role="tab"
+                                aria-controls="pills-cider-four" aria-selected="false">
+                                Customizer</button>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="pills-tabContent">
+                        <div class="tab-pane override fade show active" id="pills-cider-one" role="tabpanel"
+                            aria-labelledby="pills-cider-one-tab">
+                            <div class="tab-pane-body">
+                                <div>
+                                    <img src="../assets/stack.gif" width="100%" height="100%">
+                                </div>
+                                <div>
+                                    <p>
+                                    <h5 style="color:red;">Powered by Natural Language</h5>
+                                    CIDEr is a <font style="color:#ffd700">natural language</font>
+                                    based syntax model that is totally logically
+                                    distributed and can be easily modified to suit the developer's preferences.
+                                    Embedding CIDEr into program code efficiently handles most of the cumbersome
+                                    syntaxes and rather unfamiliar nomenclature.
+                                    <h5 style="color:red;"><br>Automata</h5>
+                                    CIDEr, when embedded, automatically completes any predictable code it may have
+                                    learnt through it's due time observing your coding patterns. Further, all
+                                    of the constructs it has created can be <font style="color:#ffd700">simultaneously compiled 
+                                    </font>along with
+                                    the generic language nomenclature thanks to it's artificially intelligent
+                                    two-pass assembler.
+
+                                    </p>
+                                    <div class="input-prompt">
+                                        <a class="demo" id="1" onclick="demoLaunch(this.id)">DEMO&#10148;</a>
+                                        <pre id="demoOne"></pre>
+                                    </div>
+                                </div>
+                                <div class="download-prompt">
+                                    <button class="to-product" onclick="window.open('../pages/CIDEr.html',target='_self')">
+                                        Meet CIDEr&#8599;</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane override fade" id="pills-cider-two" role="tabpanel"
+                            aria-labelledby="pills-cider-two-tab">
+                            <div class="tab-pane-body">
+                                <div>
+                                    <img src="../assets/fabric.gif" width="100%" height="100%">
+                                </div>
+                                <div>
+                                    <p>
+                                    <h5 style="color:red;">Self Indentation Wrap</h5>
+                                    CIDEr has a built-in <font style="color:#ffd700">self indentation wrap </font>
+                                    that is essential for 
+                                    it's assembler to probe through the depths of the program. You 
+                                    won't need to do anything manually, since the wrapper adjusts 
+                                    itself.
+                                    <h5 style="color:red;"><br>Duality</h5>
+                                    CIDEr can process dynamic-construction of constructs on the go, not 
+                                    getting interrupted by the generic program syntax. It's script 
+                                    handler is capable of machine learning and possesses the capability 
+                                    to <font style="color:#ffd700">assemble both itself and the underlying program
+                                    </font>, seamlessly integrating both of them.
+                                    </p>
+                                    <div class="input-prompt">
+                                        <a class="demo" id="2" onclick="demoLaunch(this.id)">DEMO&#10148;</a>
+                                        <pre id="demoTwo"></pre>
+                                    </div>
+                                </div>
+                                <div class="download-prompt">
+                                    <button class="to-product" onclick="window.open('../pages/CIDEr.html',target='_self')">
+                                        Meet CIDEr&#8599;</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane override fade" id="pills-cider-three" role="tabpanel"
+                            aria-labelledby="pills-cider-three-tab">
+                            <div class="tab-pane-body">
+                                <div>
+                                    <img src="../assets/translate.gif" width="100%" height="100%">
+                                </div>
+                                <div>
+                                    <p>
+                                    <h5 style="color:red;">Language Conversion</h5>
+                                    CIDEr is capable of converting most of the programs into
+                                    <font style="color:#ffd700;">AGI analysed</font>
+                                    pseudo code in form of natural language, which it uses to convert the 
+                                    program in the source language to a destination language, making this 
+                                    our flagship model.
+                                    </p>
+                                    <div class="input-prompt">
+                                        <a class="demo" id="3" onclick="demoLaunch(this.id)">DEMO&#10148;</a>
+                                        <pre id="demoThree"></pre>
+                                    </div>
+                                </div>
+                                <div class="download-prompt">
+                                    <button class="to-product" onclick="window.open('../pages/CIDEr.html',target='_self')">
+                                        Meet CIDEr&#8599;</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane override fade" id="pills-cider-four" role="tabpanel"
+                            aria-labelledby="pills-cider-four-tab">
+                            <div class="tab-pane-body">
+                                <div>
+                                    <img src="../assets/customise.gif" width="100%" height="100%">
+                                </div>
+                                <div>
+                                    <p>
+                                    <h5 style="color:red;">Universal Program Structure</h5>
+                                    The translated pseudo-like code is understandable by various compiler listeners
+                                    powered by CIDEr that is embedded into the compilers and environments using CIDEr.
+                                    These are easily customisable , and can be done so dynamically too.
+                                    <h5 style="color:red">Customisation Tool</h5>
+                                    CIDEr can help you customise clauses and syntax of one language to fit to your needs
+                                    as per your requirement. Notwithstanding the customisation, CIDEr makes sure that 
+                                    the integrity of the language is not compromised.
+                                    </p>
+                                    <div class="input-prompt">
+                                        <a class="demo" id="4" onclick="demoLaunch(this.id)">DEMO&#10148;</a>
+                                        <pre id="demoFour"></pre>
+                                    </div>
+                                </div>
+                                <div class="download-prompt">
+                                    <button class="to-product" onclick="window.open('../pages/CIDEr.html',target='_self')">
+                                        Meet CIDEr&#8599;</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <!--product description, CDE-->
+            <div class="product-description" id="cdedesc">
+                <h1 class="product-heading">CDE Developer's Kit</h1><br>
+                <div class="product-description-body">
+                    <ul class="nav nav-pills override mb-3" id="pills-tab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link override active" id="pills-cde-one-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-cde-one" type="button" role="tab" aria-controls="pills-cde-one"
+                                aria-selected="true">
+                                Phantom</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link override" id="pills-cde-two-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-cde-two" type="button" role="tab" aria-controls="pills-cde-two"
+                                aria-selected="false">
+                                Drone</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link override" id="pills-cde-three-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-cde-three" type="button" role="tab"
+                                aria-controls="pills-cde-three" aria-selected="false">
+                                Apprentice</button>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="pills-tabContent">
+                        <div class="tab-pane override fade show active" id="pills-cde-one" role="tabpanel"
+                            aria-labelledby="pills-cde-one-tab">
+                            <div class="tab-pane-body">
+                                <div>
+                                    <img src="../assets/phantom.gif" width="100%" height="100%">
+                                </div>
+                                <div>
+                                    <p>
+                                    <h5 style="color:red;">Simultaneous Code Execution</h5>
+                                    The CDE Kit is based on our CIDEr Script Model that enables Simultaneous Code 
+                                    Execution, enabling multiple source codes across various dialects to be compiled
+                                    at once. This is achieved through CIDE, our Cascade-based IDE.
+                                    <h5 style="color:red"><br>Multilink</h5>
+                                    CDE has the capability to link multiple compatible libraries across various languages 
+                                    allowing for seamless connection of multiple libraries, packages and API's into one 
+                                    composite program module. CDE's compiler listeners provide real time output and console 
+                                    logs as the program is being written.
+                                    <h5 style="color:red"><br>Mulitilateral Interaction</h5>
+                                    CDE's CIDEr backed TPA (Two Pass Assembler) acts as a dynamic request-response dynamo. 
+                                    The built-in multithread observers help divide extensive workloads into more modular 
+                                    partitions, also interacting with the compiler to reduce redundancy.
+                                    </p>
+                                </div>
+                                <div class="download-prompt">
+                                    <button class="to-product" onclick="window.open('../pages/CDE.html',target='_self')">
+                                        Get CDE&#8599;</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane override fade" id="pills-cde-two" role="tabpanel"
+                            aria-labelledby="pills-cde-two-tab">
+                            <div class="tab-pane-body">
+                                <div>
+                                    <img src="../assets/drone.gif" width="100%" height="100%">
+                                </div>
+                                <div>
+                                    <p>
+                                    <h5 style="color:red;">Bottleneck Detection</h5>
+                                    CDE comes installed with our advanced CPVAS (Cascaded Program Vitals Analysis and Screening) system
+                                    which helps detect bottlenecks in the code, all of which are communicated through embedded interfaces,
+                                    such as IDE based dialogs, alerts, etc.
+                                    <h5 style="color:red"><br>Complexity Analysis</h5>
+                                    CDE uses its CPVAS system to analyse the program and suggest changes as required through its NLCUI 
+                                    (Natural Language Cascaded User Interface). It also responds to requests queried through the user 
+                                    terminal.<br><br>
+                                    <div class="input-prompt">
+                                        CDE/NLCUI::&nbsp;<a class="demo" id="5" onclick="demoLaunch(this.id)">DEMO&#10148;</a><br>
+                                        >> analyse <a class="file-link" data-bs-toggle="modal" data-bs-target="#pythonCode">
+                                            D:/Programs/encryptionKey.py</a>, suggest some changes
+                                        <pre id="demoFive"></pre>
+                                    </div>
+                                    </p>
+                                </div>
+                                <div class="download-prompt">
+                                    <button class="to-product" onclick="window.open('../pages/CDE.html',target='_self')">
+                                        Get CDE&#8599;</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane override fade" id="pills-cde-three" role="tabpanel"
+                            aria-labelledby="pills-cde-three-tab">
+                            <div class="tab-pane-body">
+                                <div>
+                                    <img src="../assets/apprentice.gif" width="100%" height="100%">
+                                </div>
+                                <div>
+                                    <p>
+                                    <h5 style="color:red;">Intelligent Suggestions</h5>
+                                    Utilizes an AI-based dialect dictionary (Toucan) to suggest code changes and optimizations,
+                                    and identifies bugs and bottlenecks using its Interactive Bug Probing Extermination Model 
+                                    (IBPEM).
+                                    <h5 style="color:red;"><br>Learner</h5>
+                                    The CDE Kit learns from its observations throughout program development. It maintains 
+                                    comprehensive history logs of the progress of targeted projects and applications which
+                                    can be fetched using appropriate interface, NLCUI being the most supported.
+                                    </p>
+                                </div>
+                                <div class="download-prompt">
+                                    <button class="to-product" onclick="window.open('../pages/CDE.html',target='_self')">
+                                        Get CDE&#8599;</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--product description, CLE-->
+            <div class="product-description" id="cledesc"> 
+                <h1 class="product-heading">CLE Learner's Kit</h1><br>
+                <div class="product-description-body">
+                    <ul class="nav nav-pills override mb-3" id="pills-tab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link override active" id="pills-cle-one-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-cle-one" type="button" role="tab" aria-controls="pills-cle-one"
+                                aria-selected="true">
+                                Toucan</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link override" id="pills-cle-two-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-cle-two" type="button" role="tab" aria-controls="pills-cle-two"
+                                aria-selected="false">
+                                Engineer</button>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="pills-tabContent">
+                        <div class="tab-pane override fade show active" id="pills-cle-one" role="tabpanel"
+                            aria-labelledby="pills-cle-one-tab">
+                            <div class="tab-pane-body">
+                                <div>
+                                    <img src="../assets/toucan.gif" width="100%" height="100%">
+                                </div>
+                                <div>
+                                    <p>
+                                        <h5 style="color:red">Learner Developer Modules (LDMs)</h5>
+                                        These modules within CLE offer essential documentation and builders, serving as an interface for the learning environment.
+                                        These can be accessed through the in-built NLCUI or any suportable IDE/VM as an extension (<a class="inline-link"
+                                        href="../pages/cascadeAbout.html">About</a>).
+                                        <h5 style="color:red"><br>Education Edition Natural Language Models (EDENLMs)</h5>
+                                        These are plugins and models exclusively available in CLE, capable of being embedded into compatible
+                                        IDEs and VMs, catering to learner preferences. These help the learner grasp the basics of programming,
+                                        equipping them with necessary tools. 
+                                        <div class="input-prompt">
+                                            CLE/Toucan::&nbsp;<a class="demo" id="6" onclick="demoLaunch(this.id)">DEMO&#10148;</a><br>
+                                            >> need help with Array.prototype.map()
+                                            <pre id="demoSix"></pre>
+                                        </div>
+                                    </p>
+                                </div>
+                                <div class="download-prompt">
+                                    <button class="to-product" onclick="window.open('../pages/CLE.html',target='_self')">
+                                        Get CLE&#8599;</button>
+                                </div>
+                            </div>      
+                        </div>
+                        <div class="tab-pane override fade" id="pills-cle-two" role="tabpanel"
+                            aria-labelledby="pills-cle-two-tab">
+                            <div class="tab-pane-body">
+                                <div>
+                                    <img src="../assets/engineer.gif" width="100%" height="100%">
+                                </div>
+                                <div>
+                                    <p>
+                                        <h5 style="color:red">Extermination</h5>
+                                        CLE incorporates its multithreading model - the IBPEM, which efficiently identifies potential threats,
+                                        bugs, bottlenecks, and loopholes in program flow, ensuring quick and clean extermination. 
+                                        <h5 style="color:red"><br>Sprinting</h5>
+                                        CLE offers the ability to conduct dry runs and analyze limiting cases for programs fed 
+                                        through the NLCUI (Natural Language Cascaded User Interface). 
+                                        <div class="input-prompt">
+                                            CLE/Toucan::&nbsp;<a class="demo" id="7" onclick="demoLaunch(this.id)">DEMO&#10148;</a><br>
+                                            >> just find bugs and sprint over the following code:
+                                                JS>>
+                                                define tan(x, n = 10)::
+                                                    while x:gt:2 * PI do step x-=2 * PI;
+                                                    while x:lt:-2 * PI do step x+=2 * PI;
+                                                    result = term = x;
+                                                    let sign = -1;
+                                                    for (let i = 1; i &lt; n; i++) {
+                                                        term *= (x * x);term /= (2 * i + 1);result += sign * term;
+                                                        sign *= -1;
+                                                window.onload() = function () {alert(tan(2))};
+                                            <pre id="demoSeven"></pre>
+                                        </div>
+                                    </p>
+                                </div>
+                                <div class="download-prompt">
+                                    <button class="to-product" onclick="window.open('../pages/CLE.html',target='_self')">
+                                        Get CLE&#8599;</button>
+                                </div>
+                            </div>   
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--product description, CSTe-->
+            <div class="product-description" id="cstedesc">
+                <h1 class="product-heading">CSTe Tester's Kit</h1><br>
+                <div class="product-description-body">
+                    <ul class="nav nav-pills override mb-3" id="pills-tab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link override active" id="pills-cste-one-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-cste-one" type="button" role="tab" aria-controls="pills-cste-one"
+                                aria-selected="true">
+                                Observer</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link override" id="pills-cste-two-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-cste-two" type="button" role="tab" aria-controls="pills-cste-two"
+                                aria-selected="false">
+                                Watchdog</button>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="pills-tabContent">
+                        <div class="tab-pane override fade show active" id="pills-cste-one" role="tabpanel"
+                            aria-labelledby="pills-cste-one-tab">
+                            <div class="tab-pane-body">
+                                <div>
+                                    <img src="../assets/observer.gif" width="100%" height="100%">
+                                </div>
+                                <div>
+                                    <p>
+                                        CSTe is still under development, but has prototypes available <a class="inline-link" href="..pages/CSTE.html">here</a>.
+                                        <h5 style="color:red">Endurance Testing</h5>
+                                        CSTe is expected to generate load, stress, and endurance tests based on the project it is integrated with,
+                                        helping testers evaluate system performance under various scenarios. It is a classified stressor that 
+                                        exploits any detected bottlenecks and limitations to generate stress.
+                                        <h5 style="color:red"><br>Monitor</h5>
+                                        This API is anticipated to monitor resource usage and provide performance metrics and reports, enabling 
+                                        identification of bottlenecks and optimization of system-software dynamics and interactions. Observer
+                                        CSTe will support testing to ensure that recent code changes or updates have not 
+                                        introduced new defects or unintended side effects.
+
+                                        <div class="input-prompt">
+                                            CSTe::&nbsp;<a class="demo" id="8" onclick="demoLaunch(this.id)">DEMO&#10148;</a><br>
+                                            >> $observer-stressor::D:/Downloads/testApplication.exe: endurance grow-less 
+                                            <pre id="demoEight"></pre>
+                                        </div>
+                                    </p>
+                                </div>
+                                <div class="download-prompt">
+                                    <button class="to-product" onclick="window.open('../pages/CSTe.html',target='_self')">
+                                        Get CSTe&#8599;</button>
+                                </div>
+                            </div>   
+                        </div>
+                        <div class="tab-pane override fade" id="pills-cste-two" role="tabpanel"
+                            aria-labelledby="pills-cste-two-tab">
+                            <div class="tab-pane-body">
+                                <div>
+                                    <img src="../assets/watchdog.gif" width="100%" height="100%">
+                                </div>
+                                <div>
+                                    <p>
+                                        CSTe is still under development, but has prototypes available <a class="inline-link" href="..pages/CSTe.html">here</a>.
+                                        <h5 style="color:red">Security</h5>
+                                        Watchdog is predicted to incorporate security testing features, facilitating the identification of vulnerabilities 
+                                        and weaknesses in the codebase for enhanced software security. 
+                                        <h5 style="color:red"><br>Sovereignty</h5>
+                                        This API will include tools for static code analysis, vulnerability scanning, and penetration testing, aiming to detect 
+                                        potential security risks and tackle them.<br>
+
+                                        <div class="input-prompt">
+                                            CSTe::&nbsp;<a class="demo" id="9" onclick="demoLaunch(this.id)">DEMO&#10148;</a><br>
+                                            >> $awaken-watchdog::D:/Downloads/testApplication.exe: mode:strict
+                                            <pre id="demoNine">
+
+                                            </pre>
+                                        </div>
+                                    </p>
+                                </div>
+                                <div class="download-prompt">
+                                    <button class="to-product" onclick="window.open('../pages/CSTe.html',target='_self')">
+                                        Get CSTe&#8599;</button>
+                                </div>
+                            </div>   
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--closing bar -->
+            <div class="closing-bar">
+                <div class="fs-4 emblem-section">
+                    <div>Cascade&nbsp;<font style="color: red;">API</font>
+                    </div> &nbsp;&nbsp;
+                    <span id="emblem">A 2 B</span>
+                </div>
+                <div class="description">
+                    <font style="font-size:large;color:#ffd700;font-style: bold;">ABOUT OUR WEBSITE</font><br><br>
+                    This website was developed by team A2B as an official domain for Cascade API. It highlights the
+                    key features of our models and provides links to multiple sibling web-pages. All downloads and
+                    links in this webpage and it's sibling pages are 100% official and safe.<br><br><i>
+                        Copyright &copy; A2B Technologies</i>
+                </div>
+            </div>
+
+            <!--closing bars for page closure-->
+            <div class="page-close">
+                <br>
+                <div class="page-close-bar" id="bar-one"></div><br>
+                <div class="page-close-bar" id="bar-two"></div><br>
+                <div class="page-close-bar" id="bar-three"></div>
+            </div>
+
+            <!--back to top button-->
+            <a type="button" id="toTop" href="#icon">&uarr;</a>
+        </div>
+    </div>
+
+    <!--full screen modal for the python code EncryptionKey.py -->
+    <div class="modal fade" id="pythonCode" tabindex="-1" aria-labelledby="fullscreenModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen override">
+            <div class="modal-content override">
+                <div class="modal-body override">
+                    <div class="input-prompt" width="100%" height="100%">
+                        <pre>
+                            1 import random
+                            2 def generateEncryptionKey(keyLength=16):
+                            3   # Characters to choose from for the key
+                            4   characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
+                            5 
+                            6   # Generate a random key of the specified length
+                            7   encryptionkey = ''.join(random.choice(characters) for _ in range(key_length))
+                            8   return encryptionkey
+                            9   # Example usage:
+                            10  keylength = 32
+                            11  encryptionkey = generateEncryptionKey(keyLength)
+                            12  print("Generated Encryption Key:", encryptionkey)
+                        </pre>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer override">
+                <button type="button" class="btn btn-secondary override"
+                    data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+     </div>
+
+    <!--just a suggestion box for users who may experience resolution issues-->
+    <div class="modal" tabindex="-1" id="alert-modal">
+        <div class="modal-dialog">
+          <div class="modal-content override">
+            <div class="modal-header">
+                Suggestion
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <p style="color:black;">If you are experiencing resolution issues, kindly switch to landscape mode.</p>
+            </div>
+          </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
